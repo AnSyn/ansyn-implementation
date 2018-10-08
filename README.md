@@ -1,8 +1,4 @@
-[![NPM](https://nodei.co/npm/auto-subscriptions.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/auto-subscriptions/)
-
-**[Demo](https://yairtawil.github.io/auto-subscriptions/)**
-
-# AnSyn implementation
+# Angular AnSyn Implementation
 
 ## Installation
 
