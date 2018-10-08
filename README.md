@@ -17,7 +17,7 @@ add ansyn to your assets / styles on `angular.json` file:
                   "output": "/assets"
                }
              ],
-             styles: [
+             "styles": [
                "node_modules/@ansyn/assets/styles/styles.css"
              ]
 ```
