@@ -1,27 +1,65 @@
-# AnsynImplementation
+[![NPM](https://nodei.co/npm/auto-subscriptions.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/auto-subscriptions/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+**[Demo](https://yairtawil.github.io/auto-subscriptions/)**
 
-## Development server
+# AnSyn implementation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+```shell
+npm install @ansyn/ansyn @ansyn/assets
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
+add ansyn to your assets / styles on `angular.json` file:
 
-## Build
+```json
+             "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "./node_modules/@ansyn/assets",
+                  "output": "/assets"
+               }
+             ],
+             styles: [
+               "node_modules/@ansyn/assets/styles/styles.css"
+             ]
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+on `main.ts` file:
 
-## Running unit tests
+```typescript
+import { fetchConfigProviders } from '@ansyn/core';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+fetchConfigProviders('assets/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
+```
 
-## Running end-to-end tests
+on `app.module.ts`:
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { AnsynModule } from '@ansyn/ansyn';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AnsynModule.component()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Further help
+on `app.component.html`:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+  ...
+  <ansyn-app></ansyn-app>
+  ...
+```
+
