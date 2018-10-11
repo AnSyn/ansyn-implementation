@@ -1,5 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
 ansyn-app {
   display: block;
-  width: 800px;
-  height: 800px;
+  flex: 1;
+  border: 5px solid darkgreen;
 }
