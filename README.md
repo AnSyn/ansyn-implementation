@@ -58,4 +58,16 @@ on `app.component.html`:
   <ansyn-app></ansyn-app>
   ...
 ```
+`AnsynApi` service on `ansyn.component.ts`:
+```typescript
+import { AnsynApi } from '@ansyn/ansyn';
 
+@Component({
+...
+})
+export class AppComponent {
+  constructor(protected ansynApi: AnsynApi) {
+  }
+}
+
+```

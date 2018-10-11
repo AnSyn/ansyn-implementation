@@ -8,7 +8,7 @@ import { LayoutKey, layoutOptions } from '@ansyn/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  layoutOptions: LayoutKey[] = Array.from(layoutOptions.keys());
+  layoutKeys: LayoutKey[] = Array.from(layoutOptions.keys());
 
   constructor(protected ansynApi: AnsynApi) {
   }

@@ -1,5 +1,5 @@
 <h1> Angular 2 implementation </h1>
 <select (change)="setLayout($event.target.value)">
-  <option *ngFor="let option of layoutOptions">{{ option }}</option>
+  <option *ngFor="let layout of layoutKeys">{{ layout }}</option>
 </select>
 <ansyn-app></ansyn-app>
