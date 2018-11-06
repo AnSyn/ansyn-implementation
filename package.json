@@ -20,8 +20,8 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "@ansyn/ansyn": "^0.2.8-2.3",
-    "@ansyn/assets": "^0.2.8-2.3",
+    "@ansyn/ansyn": "^0.2.8-2.5",
+    "@ansyn/assets": "^0.2.8-2.5",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
