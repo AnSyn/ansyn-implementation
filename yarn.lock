@@ -175,19 +175,19 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ansyn/ansyn@^0.2.8-2.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.2.8-2.9.tgz#a61dd3d7e76810b0193f97687955f4d7c14da90c"
+"@ansyn/ansyn@^0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.2.83.tgz#87dcf552b19bf72c80df4405dd43a0d8a5d91eb8"
   dependencies:
-    "@ansyn/context" "0.2.82.9"
-    "@ansyn/core" "0.2.82.9"
-    "@ansyn/imagery" "0.2.82.9"
-    "@ansyn/map-facade" "0.2.82.9"
-    "@ansyn/menu" "0.2.82.9"
-    "@ansyn/menu-items" "0.2.82.9"
-    "@ansyn/overlays" "0.2.82.9"
-    "@ansyn/plugins" "0.2.82.9"
-    "@ansyn/status-bar" "0.2.82.9"
+    "@ansyn/context" "0.2.83"
+    "@ansyn/core" "0.2.83"
+    "@ansyn/imagery" "0.2.83"
+    "@ansyn/map-facade" "0.2.83"
+    "@ansyn/menu" "0.2.83"
+    "@ansyn/menu-items" "0.2.83"
+    "@ansyn/overlays" "0.2.83"
+    "@ansyn/plugins" "0.2.83"
+    "@ansyn/status-bar" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
     "@ngrx/store" "^6.0.1"
@@ -199,9 +199,9 @@
     tslib "^1.9.0"
     wellknown "0.5.0"
 
-"@ansyn/assets@^0.2.8-2.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/assets/-/assets-0.2.8-2.9.tgz#766de9bc47c8621347d45c1e704df1d7f269b9df"
+"@ansyn/assets@^0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/assets/-/assets-0.2.83.tgz#8fdeaf215ebdbd65e55906c8567ff5642e265b45"
   dependencies:
     "@ansyn/event-drops" "0.2.81.7"
     flatpickr "4.1.2"
@@ -209,19 +209,19 @@
     ol "4.6.3"
     primeng "^6.1.4"
 
-"@ansyn/context@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/context/-/context-0.2.8-2.9.tgz#79fbe54848a19cf54c6e3d4f06a1629e8b17e1b1"
+"@ansyn/context@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/context/-/context-0.2.83.tgz#130677bdc155558407cc96651a0982c98ce1bbd4"
   dependencies:
-    "@ansyn/core" "0.2.82.9"
+    "@ansyn/core" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/entity" "^6.0.1"
     "@ngrx/store" "^6.0.1"
     tslib "^1.9.0"
 
-"@ansyn/core@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/core/-/core-0.2.8-2.9.tgz#2d0ff0481fb559ce0b34ba4ff6b1453c3bb7a909"
+"@ansyn/core@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/core/-/core-0.2.83.tgz#000eb39a49896f0b5fd6f06abe760f763c0f62f3"
   dependencies:
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
@@ -238,20 +238,20 @@
   version "0.2.8-1.7"
   resolved "https://registry.yarnpkg.com/@ansyn/event-drops/-/event-drops-0.2.8-1.7.tgz#8009a0edbc8e29da8d302db205b0dba4daec5016"
 
-"@ansyn/imagery@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.2.8-2.9.tgz#ccb17b073f03f36e4cd9955db11f2264f1d09c07"
+"@ansyn/imagery@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.2.83.tgz#eb19de5936895eb40df0a207799ce058cbf51129"
   dependencies:
-    "@ansyn/core" "0.2.82.9"
+    "@ansyn/core" "0.2.83"
     auto-subscriptions "^1.0.3"
     tslib "^1.9.0"
 
-"@ansyn/map-facade@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.2.8-2.9.tgz#62d3c87106f12badb7dd3a75d43afc867c43e3a3"
+"@ansyn/map-facade@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.2.83.tgz#9c4a4f590c0243711d2262e7e680c83c555a722d"
   dependencies:
-    "@ansyn/core" "0.2.82.9"
-    "@ansyn/imagery" "0.2.82.9"
+    "@ansyn/core" "0.2.83"
+    "@ansyn/imagery" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
     "@ngrx/store" "^6.0.1"
@@ -262,13 +262,14 @@
     lodash "4.17.5"
     tslib "^1.9.0"
 
-"@ansyn/menu-items@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu-items/-/menu-items-0.2.8-2.9.tgz#fa242532f2deca6f2ac5a8e777363fb1f5169ee3"
+"@ansyn/menu-items@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu-items/-/menu-items-0.2.83.tgz#77748d713b0f1f5dba76e3bf983ed632d268741e"
   dependencies:
-    "@ansyn/context" "0.2.82.9"
-    "@ansyn/core" "0.2.82.9"
-    "@ansyn/menu" "0.2.82.9"
+    "@ansyn/context" "0.2.83"
+    "@ansyn/core" "0.2.83"
+    "@ansyn/map-facade" "0.2.83"
+    "@ansyn/menu" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
     "@ngrx/entity" "^6.0.1"
@@ -290,9 +291,9 @@
     tslib "^1.9.0"
     wellknown "0.5.0"
 
-"@ansyn/menu@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.2.8-2.9.tgz#f77ff867a68e8c7243b4b9ab1430b6b406ef0281"
+"@ansyn/menu@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.2.83.tgz#539897c1a2e60607c8f3a8e8144a1e45db7e3a13"
   dependencies:
     "@ngrx/core" "^1.2.0"
     "@ngrx/entity" "^6.0.1"
@@ -300,11 +301,11 @@
     auto-subscriptions "^1.0.3"
     tslib "^1.9.0"
 
-"@ansyn/overlays@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/overlays/-/overlays-0.2.8-2.9.tgz#c50c587a40bd3e3cb02769a00780bbbd6c484984"
+"@ansyn/overlays@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/overlays/-/overlays-0.2.83.tgz#2edefd88d05243c1e2bcc3a7ea01b9868ef54d0e"
   dependencies:
-    "@ansyn/core" "0.2.82.9"
+    "@ansyn/core" "0.2.83"
     "@ansyn/event-drops" "0.2.81.7"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
@@ -316,17 +317,17 @@
     lodash "4.17.5"
     tslib "^1.9.0"
 
-"@ansyn/plugins@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/plugins/-/plugins-0.2.8-2.9.tgz#2500488efd076c86495d4f4217fd5c0e2d439aa1"
+"@ansyn/plugins@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/plugins/-/plugins-0.2.83.tgz#cd55c0df71db35d0cef735a795f5124fd8d10931"
   dependencies:
-    "@ansyn/context" "0.2.82.9"
-    "@ansyn/core" "0.2.82.9"
-    "@ansyn/imagery" "0.2.82.9"
-    "@ansyn/map-facade" "0.2.82.9"
-    "@ansyn/menu-items" "0.2.82.9"
-    "@ansyn/overlays" "0.2.82.9"
-    "@ansyn/status-bar" "0.2.82.9"
+    "@ansyn/context" "0.2.83"
+    "@ansyn/core" "0.2.83"
+    "@ansyn/imagery" "0.2.83"
+    "@ansyn/map-facade" "0.2.83"
+    "@ansyn/menu-items" "0.2.83"
+    "@ansyn/overlays" "0.2.83"
+    "@ansyn/status-bar" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
     "@ngrx/store" "^6.0.1"
@@ -337,11 +338,11 @@
     ol "4.6.3"
     tslib "^1.9.0"
 
-"@ansyn/status-bar@0.2.82.9":
-  version "0.2.8-2.9"
-  resolved "https://registry.yarnpkg.com/@ansyn/status-bar/-/status-bar-0.2.8-2.9.tgz#018cafdd3d8aa71ebb5a6417bc04956e2f42622d"
+"@ansyn/status-bar@0.2.83":
+  version "0.2.83"
+  resolved "https://registry.yarnpkg.com/@ansyn/status-bar/-/status-bar-0.2.83.tgz#91b994e1052b100d4d5df3dbf294123dba033201"
   dependencies:
-    "@ansyn/core" "0.2.82.9"
+    "@ansyn/core" "0.2.83"
     "@ngrx/core" "^1.2.0"
     "@ngrx/effects" "^6.0.1"
     "@ngrx/store" "^6.0.1"
@@ -1532,6 +1533,10 @@
     "@turf/helpers" "^5.1.5"
     "@turf/invariant" "^5.1.5"
     d3-voronoi "1.1.2"
+
+"@types/geojson@^7946.0.4":
+  version "7946.0.4"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.4.tgz#4e049756383c3f055dd8f3d24e63fb543e98eb07"
 
 "@types/jasmine@*", "@types/jasmine@~2.8.6":
   version "2.8.9"
