@@ -59,8 +59,8 @@
               },
               "flags": {},
               "worldView": {
-				"mapType": "openLayersMap",
-				"sourceType": "ESRI_4326"
+                "mapType": "openLayersMap",
+                "sourceType": "ESRI_4326"
               },
               "id": "af3b94d2-03ff-44e6-9f73-10d386aff493"
             }
@@ -278,90 +278,90 @@
     "dataInputFiltersConfig": {
       "IMISIGHT": {
         "inActive": true,
-      	"treeViewItem": {
-		  "text":"Imisight",
-		  "value": 1,
-		  "collapsed": true,
-		  "children": [
-			 {
-				"text": "All",
-				"value": {
-				  "sensorType": "All"
-				}
-			  }
-			]
-		  }
-	  },
+        "treeViewItem": {
+          "text":"Imisight",
+          "value": 1,
+          "collapsed": true,
+          "children": [
+            {
+              "text": "All",
+              "value": {
+                "sensorType": "All"
+              }
+            }
+          ]
+        }
+      },
       "PLANET": {
         "inActive": false,
         "treeViewItem": {
-        "text": "Planet",
-        "value": 1,
-            "collapsed": true,
-            "children": [
-              {
-                "text": "REScene",
-                "value": {
-                  "sensorType": "REScene"
-                }
-              },
-              {
-                "text": "PSScene3Band",
-                "value": {
-                  "sensorType": "PSScene3Band"
-                }
-              },
-              {
-                "text": "PSOrthoTile",
-                "value": {
-                  "sensorType": "PSOrthoTile"
-                }
-              },
-              {
-                "text": "REOrthoTile",
-                "value": {
-                  "sensorType": "REOrthoTile"
-                }
-              },
-              {
-                "text": "SkySatScene",
-                "value": {
-                  "sensorType": "SkySatScene"
-                }
-              },
-              {
-                "text": "Landsat8L1G",
-                "value": {
-                  "sensorType": "Landsat8L1G"
-                }
-              },
-              {
-                "text": "Sentinel2L1C",
-                "value": {
-                  "sensorType": "Sentinel2L1C"
-                }
+          "text": "Planet",
+          "value": 1,
+          "collapsed": true,
+          "children": [
+            {
+              "text": "REScene",
+              "value": {
+                "sensorType": "REScene"
               }
-            ]
-          }
-        },
-        "OPEN_AERIAL": {
-          "inActive": false,
-          "treeViewItem": {
-            "text": "OpenAerial",
-            "value": 1,
-            "indeterminate": true,
-            "collapsed": true,
-            "children": [
-              {
-                "text": "UAV",
-                "value": {
-                  "sensorType": "UAV"
-                }
+            },
+            {
+              "text": "PSScene3Band",
+              "value": {
+                "sensorType": "PSScene3Band"
               }
-            ]
-          }
+            },
+            {
+              "text": "PSOrthoTile",
+              "value": {
+                "sensorType": "PSOrthoTile"
+              }
+            },
+            {
+              "text": "REOrthoTile",
+              "value": {
+                "sensorType": "REOrthoTile"
+              }
+            },
+            {
+              "text": "SkySatScene",
+              "value": {
+                "sensorType": "SkySatScene"
+              }
+            },
+            {
+              "text": "Landsat8L1G",
+              "value": {
+                "sensorType": "Landsat8L1G"
+              }
+            },
+            {
+              "text": "Sentinel2L1C",
+              "value": {
+                "sensorType": "Sentinel2L1C"
+              }
+            }
+          ]
+        }
+      },
+      "OPEN_AERIAL": {
+        "inActive": false,
+        "treeViewItem": {
+          "text": "OpenAerial",
+          "value": 1,
+          "indeterminate": true,
+          "collapsed": true,
+          "children": [
+            {
+              "text": "UAV",
+              "value": {
+                "sensorType": "UAV"
+              }
+            }
+          ]
         }
       }
+    }
   },
   "coreConfig": {
 	"welcomeNotification": {
@@ -372,9 +372,11 @@
       "baseUrl": "http://ansyn.io:8081/api/store"
     },
     "translation": {
-    	"default": {
-		 	"Sentinel-2A": "Sentinel 2A"
-	   	}
+      "default": {
+        "Sentinel-2A": "Sentinel 2A",
+        "alg_1": "name 1",
+        "alg_2": "name 2"
+      }
     },
     "needToUseLayerExtent": false
   },
@@ -384,16 +386,16 @@
     "background": "red",
     "mode": "",
     "forkMe": {
-    	"active": true,
-    	"image": "assets/icons/forkme.svg",
-    	"title": "Fork me on github",
-		"href": "https://github.com/ansyn/ansyn"
+      "active": true,
+      "image": "assets/icons/forkme.svg",
+      "title": "Fork me on github",
+      "href": "https://github.com/ansyn/ansyn"
     }
   },
   "loginConfig": {
-  	"baseUrl": "http://ansyn.io:9001/api/v1/login",
-  	"active":  false,
-  	"authorizedPath": "/"
+    "baseUrl": "http://ansyn.io:9001/api/v1/login",
+    "active":  false,
+    "authorizedPath": "/"
   },
   "visualizersConfig": {
     "FrameVisualizer": {
@@ -448,50 +450,50 @@
     }
   },
   "multipleOverlaysSourceConfig": {
-	 "defaultProvider": {
-	 	"inActive": false,
-		"whitelist": [
-		  {
-			"name": "Entire Earth",
-			"dates": [
-			  {
-				"start": null,
-				"end": null
-			  }
-			],
-			"sensorNames": [null],
-			"coverage": [
-			  [
-				[
-				  [
-					-180,
-					-90
-				  ],
-				  [
-					-180,
-					90
-				  ],
-				  [
-					180,
-					90
-				  ],
-				  [
-					180,
-					-90
-				  ],
-				  [
-					-180,
-					-90
-				  ]
-				]
-			  ]
-			]
-		  }
-		],
-	  "blacklist": []
-	},
+    "defaultProvider": {
+      "inActive": false,
+      "whitelist": [
+        {
+          "name": "Entire Earth",
+          "dates": [
+            {
+              "start": null,
+              "end": null
+            }
+          ],
+          "sensorNames": [null],
+          "coverage": [
+            [
+              [
+                [
+                  -180,
+                  -90
+                ],
+                [
+                  -180,
+                  90
+                ],
+                [
+                  180,
+                  90
+                ],
+                [
+                  180,
+                  -90
+                ],
+                [
+                  -180,
+                  -90
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "blacklist": []
+    },
     "IDAHO": {
-	  "inActive": true,
+      "inActive": true,
       "whitelist": [
         {
           "name": "Entire Earth",
@@ -533,7 +535,7 @@
       "blacklist": []
     },
     "PLANET": {
-	  "inActive": false,
+      "inActive": false,
       "whitelist": [
         {
           "name": "USA",
@@ -544,7 +546,7 @@
             }
           ],
           "sensorNames": [ "Landsat8L1G", "Sentinel2L1C" ],
-		  "coverage": [[[[-126.73828125000001,48.195387408333374],[-51.32812500000002,47.9605023889151],[-80.24414062500001,24.166802085303246],[-125.94726562500003,30.41078179084589],[-126.73828125000001,48.195387408333374]]]]
+          "coverage": [[[[-126.73828125000001,48.195387408333374],[-51.32812500000002,47.9605023889151],[-80.24414062500001,24.166802085303246],[-125.94726562500003,30.41078179084589],[-126.73828125000001,48.195387408333374]]]]
         },
         {
           "name": "California",
@@ -938,89 +940,89 @@
       "blacklist": []
     },
     "OPEN_AERIAL": {
-    	"inActive": false,
-		"whitelist": [
-			{
-				"name": "Entire Earth",
-				"dates": [
-					{
-						"start": null,
-						"end": null
-					}
-				],
-				"sensorNames": [ null ],
-				"coverage": [
-					[
-						[
-							[
-								-180,
-								-90
-							],
-							[
-								-180,
-								90
-							],
-							[
-								180,
-								90
-							],
-							[
-								180,
-								-90
-							],
-							[
-								-180,
-								-90
-							]
-						]
-					]
-				]
-			}
-		],
-		"blacklist": []
-	},
+      "inActive": false,
+      "whitelist": [
+        {
+          "name": "Entire Earth",
+          "dates": [
+            {
+              "start": null,
+              "end": null
+            }
+          ],
+          "sensorNames": [ null ],
+          "coverage": [
+            [
+              [
+                [
+                  -180,
+                  -90
+                ],
+                [
+                  -180,
+                  90
+                ],
+                [
+                  180,
+                  90
+                ],
+                [
+                  180,
+                  -90
+                ],
+                [
+                  -180,
+                  -90
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "blacklist": []
+    },
     "IMISIGHT": {
-    	"inActive": true,
-		"whitelist": [
-			{
-				"name": "Entire Earth",
-				"dates": [
-					{
-						"start": null,
-						"end": null
-					}
-				],
-				"sensorNames": [null],
-				"coverage": [
-					[
-						[
-							[
-								-180,
-								-90
-							],
-							[
-								-180,
-								90
-							],
-							[
-								180,
-								90
-							],
-							[
-								180,
-								-90
-							],
-							[
-								-180,
-								-90
-							]
-						]
-					]
-				]
-			}
-		],
-		"blacklist": []
-	}
+      "inActive": true,
+      "whitelist": [
+        {
+          "name": "Entire Earth",
+          "dates": [
+            {
+              "start": null,
+              "end": null
+            }
+          ],
+          "sensorNames": [null],
+          "coverage": [
+            [
+              [
+                [
+                  -180,
+                  -90
+                ],
+                [
+                  -180,
+                  90
+                ],
+                [
+                  180,
+                  90
+                ],
+                [
+                  180,
+                  -90
+                ],
+                [
+                  -180,
+                  -90
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "blacklist": []
+    }
   },
   "idahoOverlaysSourceConfig": {
     "defaultApi": "overlays",
@@ -1049,13 +1051,28 @@
     "delayMultiple": 300
   },
   "auth0Config": {
-      "auth0Active": false,
-      "clientID":"KXLTbs08LtLqrbPwSgn7Ioej0aMB7tf6",
-      "domain": "imisight-sat.auth0.com",
-      "responseType": "token id_token",
-      "audience": "https://gw.sat.imisight.net",
-      "callbackURL": "http://localhost:4200/#/callback/",
-      "scope": "openid"
+    "auth0Active": false,
+    "clientID":"KXLTbs08LtLqrbPwSgn7Ioej0aMB7tf6",
+    "domain": "imisight-sat.auth0.com",
+    "responseType": "token id_token",
+    "audience": "https://gw.sat.imisight.net",
+    "callbackURL": "http://localhost:4200/#/callback/",
+    "scope": "openid"
   },
-  "ORIENTATIONS": ["Align North", "User Perspective", "Imagery Perspective"]
+  "ORIENTATIONS": ["Align North", "User Perspective", "Imagery Perspective"],
+  "algorithmsConfig": {
+    "alg_1" : {
+      "maxOverlays": 20,
+      "timeEstimationPerOverlayInMinutes": 10,
+      "sensorNames": [ "Sentinel-2A", "Sentinel-2B" ],
+      "regionLengthInMeters": 200
+    },
+    "alg_2" : {
+      "maxOverlays": 2,
+      "timeEstimationPerOverlayInMinutes": 20,
+      "sensorNames": [ "Sentinel-2A" ],
+      "regionLengthInMeters": 100
+    }
+  },
+  "MENU_ITEMS_CONFIG": []
 }
