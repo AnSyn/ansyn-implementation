@@ -17,12 +17,11 @@ export class AppComponent {
   constructor(protected ansynApi: AnsynApi,
     private http: HttpClient) {
 
-    this.getFeatureCollectionFromFile().subscribe(res => {
-      console.log(res);
-    this.featureOptions = res.featureCollection;
+    this.getFeatureCollectionFromFile().subscribe(response => {
+    this.featureOptions = response.featureCollection;
     });
-    this.ansynApi.getActiveCenter$.subscribe((aaa) => {
-      console.log(aaa);
+    this.ansynApi.getActiveCenter$.subscribe((center) => {
+      console.log(center);
     });
   }
 
