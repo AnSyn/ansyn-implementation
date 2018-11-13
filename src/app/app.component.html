@@ -5,6 +5,9 @@
     <option *ngFor="let layout of layoutKeys">{{ layout }}</option>
   </select>
 
+  <button (click)="setFeatureCollection()">features</button>
+  <button (click)="deleteFeatureCollection()">remove all features</button>
+
 </div>
 
 <ansyn-app></ansyn-app>
