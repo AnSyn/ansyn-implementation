@@ -71,3 +71,5 @@ export class AppComponent {
 }
 
 ```
+
+In folder `src/assets` create `ansyn.config.json` (copy from example...)
