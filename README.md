@@ -73,7 +73,19 @@ export class AppComponent {
   constructor(protected ansynApi: AnsynApi) {
   }
 }
-
 ```
 
-In folder `src/assets` create file `app.config.json` (copy from example...)
+on `app.component.css`:
+
+The element `ansyn-app` has to receive height. It can be explicit height, or implicit like "display:flex" + "flex:1"
+For example:
+
+```
+ansyn-app {
+  display: block;
+  height: 500px;
+  border: 1px solid darkgreen;
+}
+```
+
+In folder `src/assets` create file `app.config.json` (copy from @ansyn/assets/config ?)
