@@ -5,6 +5,10 @@
 ```shell
 npm install @ansyn/ansyn @ansyn/assets
 ```
+or
+```shell
+yarn add @ansyn/ansyn @ansyn/assets
+```
 
 ## Usage
 add ansyn to your assets / styles on `angular.json` file,  under yourProject/architect/build/options:
