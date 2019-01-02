@@ -31,7 +31,7 @@ on `main.ts` file:
 ```typescript
 import { fetchConfigProviders } from '@ansyn/core';
 
-fetchConfigProviders('assets/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
+fetchConfigProviders('assets/config/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
 ```
 
 on `app.module.ts`:
@@ -88,4 +88,3 @@ ansyn-app {
 }
 ```
 
-In folder `src/assets` create file `app.config.json` (copy from @ansyn/assets/config ?)
