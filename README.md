@@ -9,6 +9,10 @@ or
 ```shell
 yarn add @ansyn/ansyn @ansyn/assets
 ```
+(or, to update existing packages:)
+```shell
+yarn upgrade @ansyn/ansyn @ansyn/assets
+```
 
 ## Usage
 add ansyn to your assets / styles on `angular.json` file,  under yourProject/architect/build/options:
