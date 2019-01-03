@@ -33,7 +33,7 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
 on `main.ts` file:
 
 ```typescript
-import { fetchConfigProviders } from '@ansyn/core';
+import { fetchConfigProviders } from '@ansyn/ansyn';
 
 fetchConfigProviders('assets/config/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
 ```
