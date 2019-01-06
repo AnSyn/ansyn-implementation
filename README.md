@@ -5,6 +5,14 @@
 ```shell
 npm install @ansyn/ansyn @ansyn/assets
 ```
+or
+```shell
+yarn add @ansyn/ansyn @ansyn/assets
+```
+(or, to update existing packages:)
+```shell
+yarn upgrade @ansyn/ansyn @ansyn/assets
+```
 
 ## Usage
 add ansyn to your assets / styles on `angular.json` file,  under yourProject/architect/build/options:
@@ -25,9 +33,9 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
 on `main.ts` file:
 
 ```typescript
-import { fetchConfigProviders } from '@ansyn/core';
+import { fetchConfigProviders } from '@ansyn/ansyn';
 
-fetchConfigProviders('assets/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
+fetchConfigProviders('assets/config/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
 ```
 
 on `app.module.ts`:
@@ -69,7 +77,18 @@ export class AppComponent {
   constructor(protected ansynApi: AnsynApi) {
   }
 }
-
 ```
 
-In folder `src/assets` create `ansyn.config.json` (copy from example...)
+on `app.component.css`:
+
+The element `ansyn-app` has to receive height. It can be explicit height, or implicit like "display:flex" + "flex:1"
+For example:
+
+```
+ansyn-app {
+  display: block;
+  height: 500px;
+  border: 1px solid darkgreen;
+}
+```
+
