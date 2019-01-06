@@ -23,10 +23,18 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
                   "glob": "**/*",
                   "input": "./node_modules/@ansyn/assets",
                   "output": "/assets"
-               }
+                },
+                {
+                  "glob": "**/*",
+                  "input": "node_modules/cesium/Build/Cesium",
+                  "output": "/assets/Cesium"
+                }
              ],
              "styles": [
                "node_modules/@ansyn/assets/styles/styles.css"
+             ],
+             "scripts": [
+               "node_modules/cesium/Build/Cesium/Cesium.js"
              ]
 ```
 

@@ -29,6 +29,11 @@
                 "input": "./node_modules/@ansyn/assets",
                 "output": "/assets"
               },
+              {
+                "glob": "**/*",
+                "input": "node_modules/cesium/Build/Cesium",
+                "output": "/assets/Cesium"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -36,7 +41,9 @@
               "src/styles.css",
               "node_modules/@ansyn/assets/styles/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/cesium/Build/Cesium/Cesium.js"
+            ]
           },
           "configurations": {
             "production": {
