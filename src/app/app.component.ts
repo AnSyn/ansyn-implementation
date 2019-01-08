@@ -43,7 +43,7 @@ export class AppComponent {
   }
 
   setPositionWithRadius() {
-    this.ansynApi.setMapPositionByRadius({type: 'Point', coordinates: [-117.914, 33.8117]}, 100);
+    this.ansynApi.setMapPositionByRadius({type: 'Point', coordinates: [-117.914, 33.8117]}, 100, true);
   }
 
   clearOverlays() {
