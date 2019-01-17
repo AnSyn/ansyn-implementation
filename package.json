@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "npm run build -- --base-href=https://ansyn.github.io/angular-ansyn-implementation/ --deploy-url=https://ansyn.github.io/angular-ansyn-implementation/",
+    "deploy": "gh-pages --repo https://$GITHUB_TOKEN@github.com/AnSyn/angular-ansyn-implementation.git -d dist/angular-ansyn-implementation"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +39,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "gh-pages": "^2.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
