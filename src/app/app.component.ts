@@ -5,6 +5,7 @@ import {FeatureCollection} from 'geojson';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import * as momentNs from 'moment';
+import {take, tap} from 'rxjs/operators';
 
 const moment = momentNs;
 
@@ -142,5 +143,16 @@ export class AppComponent {
 
   displayOverlay() {
     this.ansynApi.displayOverLay(this.overlays[0]);
+  }
+
+  displayTwoOverlays() {
+    this.ansynApi.changeMapLayout('layout2').pipe(
+      tap(() => {
+        this.ansynApi.setOverlays(this.overlays);
+        this.ansynApi.displayOverLay(this.overlays[1], 0);
+        this.ansynApi.displayOverLay(this.overlays[2], 1);
+      }),
+      take(1)
+    ).subscribe();
   }
 }
