@@ -139,4 +139,8 @@ export class AppComponent {
   setOverlays() {
     this.ansynApi.setOverlays(this.overlays);
   }
+
+  displayOverlay() {
+    this.ansynApi.displayOverLay(this.overlays[0]);
+  }
 }
