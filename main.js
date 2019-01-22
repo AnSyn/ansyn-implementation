@@ -323,7 +323,7 @@ module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  width:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"top\">\n\n  <h1> Angular 2 implementation </h1>\n  <select (change)=\"setLayout($event.target.value)\">\n    <option *ngFor=\"let layout of layoutKeys\">{{ layout }}</option>\n  </select>\n\n  <button (click)=\"setFeatureCollection()\">features</button>\n  <button (click)=\"deleteFeatureCollection()\">remove all features</button>\n  <button (click)=\"setPositionWithRadius()\">set position w/radius</button>\n  <button (click)=\"clearOverlays()\">Clear overlays</button>\n\n</div>\n\n<ansyn-app></ansyn-app>\n"
+module.exports = "<div class=\"top\">\n\n  <h1> Angular 2 implementation </h1>\n  <select (change)=\"setLayout($event.target.value)\">\n    <option *ngFor=\"let layout of layoutKeys\">{{ layout }}</option>\n  </select>\n\n  <button (click)=\"setFeatureCollection()\">add features</button>\n  <button (click)=\"deleteFeatureCollection()\">remove features</button>\n  <button (click)=\"setPositionWithRadius()\">set position + radius + search</button>\n  <button (click)=\"setOverlays()\">set overlays</button>\n  <button (click)=\"displayOverlay()\">display overlay</button>\n  <button (click)=\"displayTwoOverlays()\">display two overlays</button>\n\n</div>\n\n<ansyn-app></ansyn-app>\n"
 
 /***/ }),
 
@@ -341,6 +341,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ansyn/ansyn */ "./node_modules/@ansyn/ansyn/fesm5/ansyn-ansyn.js");
 /* harmony import */ var _ansyn_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ansyn/core */ "./node_modules/@ansyn/core/fesm5/ansyn-core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -354,12 +357,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+var moment = moment__WEBPACK_IMPORTED_MODULE_4__;
 var AppComponent = /** @class */ (function () {
     function AppComponent(ansynApi, http) {
         var _this = this;
         this.ansynApi = ansynApi;
         this.http = http;
         this.layoutKeys = Array.from(_ansyn_core__WEBPACK_IMPORTED_MODULE_2__["layoutOptions"].keys());
+        this.overlays = [
+            this.overlay('000', 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Reeipublic_Banana.gif', 576, 1024, this.calcDate(0)),
+            this.overlay('111', 'https://image.shutterstock.com/image-vector/cool-comic-book-bubble-text-450w-342092249.jpg', 470, 450, this.calcDate(1)),
+            this.overlay('222', 'https://imgs.xkcd.com/comics/online_communities.png', 1024, 968, this.calcDate(2)),
+            this.overlay('333', 'https://image.shutterstock.com/z/stock-vector-cool-milkshake-190524542.jpg', 1600, 1500, this.calcDate(3))
+        ];
         this.getFeatureCollectionFromFile().subscribe(function (response) {
             _this.featureOptions = response.featureCollection;
         });
@@ -367,6 +379,46 @@ var AppComponent = /** @class */ (function () {
             console.log(center);
         });
     }
+    AppComponent.prototype.calcDate = function (days) {
+        return moment().subtract(days, 'day').toDate();
+    };
+    AppComponent.prototype.overlay = function (id, imageUrl, imageWidth, imageHeight, date) {
+        var left = -117.94, top = 33.82, width = 0.05, height = 0.02, right = left + width * Math.random(), bottom = top - height * Math.random();
+        return {
+            name: id,
+            id: id,
+            photoTime: date.toISOString(),
+            date: date,
+            azimuth: 0,
+            isGeoRegistered: false,
+            sourceType: 'STATIC_IMAGE',
+            tag: {
+                imageData: {
+                    imageWidth: imageWidth,
+                    imageHeight: imageHeight
+                }
+            },
+            footprint: {
+                type: 'MultiPolygon',
+                coordinates: [[[
+                            [left, top],
+                            [right, top],
+                            [right, bottom],
+                            [left, bottom],
+                            [left, top]
+                        ]
+                    ]
+                ]
+            },
+            baseImageUrl: '',
+            imageUrl: imageUrl,
+            thumbnailUrl: imageUrl,
+            sensorName: 'mySensorName',
+            sensorType: 'mySensorType',
+            bestResolution: 1,
+            cloudCoverage: 1
+        };
+    };
     AppComponent.prototype.setFeatureCollection = function () {
         this.ansynApi.setAnnotations(this.featureOptions);
     };
@@ -382,8 +434,19 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.setPositionWithRadius = function () {
         this.ansynApi.setMapPositionByRadius({ type: 'Point', coordinates: [-117.914, 33.8117] }, 100, true);
     };
-    AppComponent.prototype.clearOverlays = function () {
-        this.ansynApi.setOverlays([]);
+    AppComponent.prototype.setOverlays = function () {
+        this.ansynApi.setOverlays(this.overlays);
+    };
+    AppComponent.prototype.displayOverlay = function () {
+        this.ansynApi.displayOverLay(this.overlays[0]);
+    };
+    AppComponent.prototype.displayTwoOverlays = function () {
+        var _this = this;
+        this.ansynApi.changeMapLayout('layout2').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function () {
+            _this.ansynApi.setOverlays(_this.overlays);
+            _this.ansynApi.displayOverLay(_this.overlays[1], 0);
+            _this.ansynApi.displayOverLay(_this.overlays[2], 1);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["take"])(1)).subscribe();
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -497,7 +560,29 @@ __webpack_require__.r(__webpack_exports__);
 if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
-Object(_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_4__["fetchConfigProviders"])('assets/app.config.json')
+var mergeChanges = {
+    'casesConfig': {
+        'defaultCase': {
+            'state': {
+                'facets': {
+                    'showOnlyFavorites': false,
+                    'filters': [
+                        {
+                            'metadata': {
+                                'displayTrue': true,
+                                'displayFalse': true
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    'coreConfig': {
+        'noInitialSearch': true
+    }
+};
+Object(_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_4__["fetchConfigProviders"])('assets/app.config.json', mergeChanges)
     .then(function (providers) { return Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"]).catch(function (err) { return console.log(err); }); });
 
 

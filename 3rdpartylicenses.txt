@@ -44,7 +44,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@ansyn/assets@0.2.89
+@ansyn/assets@0.2.93
 MIT
 MIT
 
@@ -75,6 +75,30 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
+@angular/cdk@6.4.7
+MIT
+The MIT License
+
+Copyright (c) 2018 Google LLC.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
 @angular/common@6.1.9
 MIT
 MIT
@@ -91,6 +115,30 @@ MIT
 MIT
 MIT
 
+@angular/material@6.4.7
+MIT
+The MIT License
+
+Copyright (c) 2018 Google LLC.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
 @angular/platform-browser-dynamic@6.1.9
 MIT
 MIT
@@ -103,15 +151,15 @@ MIT
 MIT
 MIT
 
-@ansyn/ansyn@0.2.89
+@ansyn/ansyn@0.2.93
 MIT
 MIT
 
-@ansyn/context@0.2.89
+@ansyn/context@0.2.93
 MIT
 MIT
 
-@ansyn/core@0.2.89
+@ansyn/core@0.2.93
 MIT
 MIT
 
@@ -119,31 +167,31 @@ MIT
 MIT
 MIT
 
-@ansyn/imagery@0.2.89
+@ansyn/imagery@0.2.93
 MIT
 MIT
 
-@ansyn/map-facade@0.2.89
+@ansyn/map-facade@0.2.93
 MIT
 MIT
 
-@ansyn/menu-items@0.2.89
+@ansyn/menu-items@0.2.93
 MIT
 MIT
 
-@ansyn/menu@0.2.89
+@ansyn/menu@0.2.93
 MIT
 MIT
 
-@ansyn/overlays@0.2.89
+@ansyn/overlays@0.2.93
 MIT
 MIT
 
-@ansyn/plugins@0.2.89
+@ansyn/plugins@0.2.93
 MIT
 MIT
 
-@ansyn/status-bar@0.2.89
+@ansyn/status-bar@0.2.93
 MIT
 MIT
 
