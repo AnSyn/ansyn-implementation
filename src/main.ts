@@ -9,5 +9,28 @@ if (environment.production) {
   enableProdMode();
 }
 
-fetchConfigProviders('assets/app.config.json')
+const mergeChanges = {
+  'casesConfig': {
+    'defaultCase': {
+      'state': {
+        'facets': {
+          'showOnlyFavorites': false,
+          'filters': [
+            {
+              'metadata': {
+                'displayTrue': true,
+                'displayFalse': true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  'coreConfig': {
+    'noInitialSearch': true
+  }
+};
+
+fetchConfigProviders('assets/app.config.json', mergeChanges)
   .then(providers => platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
