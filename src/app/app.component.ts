@@ -149,8 +149,8 @@ export class AppComponent {
     this.ansynApi.changeMapLayout('layout2').pipe(
       tap(() => {
         this.ansynApi.setOverlays(this.overlays);
-        this.ansynApi.displayOverLay(this.overlays[1], 0);
-        this.ansynApi.displayOverLay(this.overlays[2], 1);
+        this.ansynApi.displayOverLay(this.overlays[1], 1);
+        this.ansynApi.displayOverLay(this.overlays[2], 0);
       }),
       take(1)
     ).subscribe();
