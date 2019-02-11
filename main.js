@@ -444,8 +444,8 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         this.ansynApi.changeMapLayout('layout2').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function () {
             _this.ansynApi.setOverlays(_this.overlays);
-            _this.ansynApi.displayOverLay(_this.overlays[1], 0);
-            _this.ansynApi.displayOverLay(_this.overlays[2], 1);
+            _this.ansynApi.displayOverLay(_this.overlays[1], 1);
+            _this.ansynApi.displayOverLay(_this.overlays[2], 0);
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["take"])(1)).subscribe();
     };
     AppComponent = __decorate([
