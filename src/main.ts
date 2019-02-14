@@ -29,6 +29,12 @@ const mergeChanges = {
   },
   'coreConfig': {
     'noInitialSearch': true
+  },
+  'menuConfig': {
+    'menuItems': [
+      'Filters',
+      'Tools'
+    ]
   }
 };
 
