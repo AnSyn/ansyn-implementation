@@ -585,6 +585,12 @@ var mergeChanges = {
     },
     'coreConfig': {
         'noInitialSearch': true
+    },
+    'menuConfig': {
+        'menuItems': [
+            'Filters',
+            'Tools'
+        ]
     }
 };
 Object(_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_4__["fetchConfigProviders"])('assets/app.config.json', mergeChanges)
