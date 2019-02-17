@@ -242,24 +242,21 @@
     tslib "^1.9.0"
 
 "@ansyn/ansyn@^0.2.83":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.2.95.tgz#ef7bcac818c6a1e54cabd9a5db689da25eeb1cb6"
-  integrity sha512-IcDG3wgXl9HDcI0ldB2HQ7drGz6RL2ysTi2yMpUyA+2WO1uaqEWMBYrRI3z679L/cwoTyucwsm0qQNprqXQVaA==
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.2.98.tgz#fac8cb3eae47c8bcbd368407029074d124fa48a2"
+  integrity sha512-qM4Ac7wCmzrIq2SWTriTVdAt1ohEJ2XTYjRyaEnfBLlv/0/333kf1+XSw/MN/gKrqUZKoSa6gUUgDgoVtp+EtQ==
   dependencies:
     "@angular/cdk" "^7.3.0"
     "@angular/material" "^7.3.0"
-    "@ansyn/context" "0.2.95"
-    "@ansyn/core" "0.2.95"
-    "@ansyn/imagery" "0.2.95"
-    "@ansyn/map-facade" "0.2.95"
-    "@ansyn/menu" "0.2.95"
-    "@ansyn/menu-items" "0.2.95"
-    "@ansyn/overlays" "0.2.95"
-    "@ansyn/plugins" "0.2.95"
-    "@ansyn/status-bar" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
+    "@ansyn/context" "0.2.98"
+    "@ansyn/core" "0.2.98"
+    "@ansyn/imagery" "0.2.98"
+    "@ansyn/map-facade" "0.2.98"
+    "@ansyn/menu" "0.2.98"
+    "@ansyn/menu-items" "0.2.98"
+    "@ansyn/overlays" "0.2.98"
+    "@ansyn/plugins" "0.2.98"
+    "@ansyn/status-bar" "0.2.98"
     "@turf/turf" "5.1.6"
     geojson "^0.5.0"
     lodash "4.17.5"
@@ -269,9 +266,9 @@
     wellknown "0.5.0"
 
 "@ansyn/assets@^0.2.83":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/assets/-/assets-0.2.95.tgz#a394c0a27d83fd907e5043dd3fe822d84f5882f7"
-  integrity sha512-rT9DxLIqrqxDCWMnnjw9fAN5zCUH2EPe3Fdfimg0YNwujVPtBmkfMm1kQ48khIPa/BwNqLz16E8VnAw5v0etcg==
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/assets/-/assets-0.2.98.tgz#b2afd0d2baa32263bb5ea30a8dc3a29b3619e7c3"
+  integrity sha512-Nb/wTclPAyu4TN0aeurRJDDDF037N5KBDIHsH7+4654jnxacEZP6Z3i4wvcCTzhoeMjHIYROjIN9ep5j2yRRPA==
   dependencies:
     "@ansyn/event-drops" "0.2.81.7"
     flatpickr "4.1.2"
@@ -279,32 +276,24 @@
     ol "^5.3.0"
     primeng "^6.1.4"
 
-"@ansyn/context@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/context/-/context-0.2.95.tgz#ac2af04389b118e03141e3595d72f953370b0e37"
-  integrity sha512-LzmCKsKdM2xL4pnh/Ud7GbNh7BI5Dyd4Co2RMrJFt8JsrsUrnb5ZHmbleGaU0kTDkNb0Vtv5JvjtUyEdEI5ilA==
+"@ansyn/context@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/context/-/context-0.2.98.tgz#16560792bfa5380ae89482b2439b49d996ef36d6"
+  integrity sha512-np/4hnC7rz/u6MI7h+OCQZzvAkKGK5bf33/zX2zqlxSGUbReyBA/mwAoLBPRSB7mlGkWuJISy+2SRkGyJC5fGw==
   dependencies:
-    "@ansyn/core" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/entity" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
     tslib "^1.9.0"
 
-"@ansyn/core@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/core/-/core-0.2.95.tgz#d5e3b87cde13566a9f7d74d0a3978005d11b6ad9"
-  integrity sha512-ucxaKgvvUwXjLIlFJcr2eD5+FC4XDjzu0Lb16xANOwBlV9SJS+Wa8uZ0+6xzYW4OVswgwgrsWwyMSUlOUkattQ==
+"@ansyn/core@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/core/-/core-0.2.98.tgz#991de84be56832e1f1274bca4cdf2cf32192afd0"
+  integrity sha512-pIxd0WOnp0g23WoJo/a7+KJlfV5hLjWFjtH3bC5aSlkP2GQZaqKy/9bZGEgo0dF+2ziMJp/reMJAvtDQVAcgwA==
   dependencies:
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
     "@ngx-translate/core" "^10.0.2"
     "@turf/turf" "5.1.6"
     angular2-uuid "1.1.1"
     auto-subscriptions "^1.0.3"
     lodash "4.17.5"
     lodash-decorators "4.5.0"
-    ngx-treeview "^2.0.7"
     tslib "^1.9.0"
 
 "@ansyn/event-drops@0.2.81.7":
@@ -312,25 +301,22 @@
   resolved "https://registry.yarnpkg.com/@ansyn/event-drops/-/event-drops-0.2.8-1.7.tgz#8009a0edbc8e29da8d302db205b0dba4daec5016"
   integrity sha512-DUCEPDbhFnX+Q2xgx1enCs1IMmHzhPw+ZdkcvTp2edJZXGApQjEVVmVeAfmU1TW/KfBwOZGNivBKWvvr4heqPQ==
 
-"@ansyn/imagery@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.2.95.tgz#eaedcf651afe00a6a3c9d95053c9c0e435238554"
-  integrity sha512-hGZEUDkI5O4GTogGdy8duzwfiVen9X18QGgyW6xRvU1hxm7zgfTJsJ+kY8iW3uuOUWFTZYxBq381VuWI8NuOxQ==
+"@ansyn/imagery@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.2.98.tgz#d9deae8a8b646166114bfeb0e985c78119028739"
+  integrity sha512-n/UE84g+zLqU1rTcupYKMZ/TfiKjTwNDglkWmqbbE1PD6qGIm6I/23hEJhNBltFHr2PJ0OUDIPCQdQfE2nOV5g==
   dependencies:
-    "@ansyn/core" "0.2.95"
+    "@ansyn/core" "0.2.98"
     auto-subscriptions "^1.0.3"
     tslib "^1.9.0"
 
-"@ansyn/map-facade@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.2.95.tgz#4b1b4ac3e1980de06b85581873f1af05de6b7983"
-  integrity sha512-jM7FvZUMGVz5bim1SuyGxwgXTkMzEgVq1ECwoheeIK789fz/HHQtEGFrgjqQhpfsap915sniRa/Od1Wwfh2jUQ==
+"@ansyn/map-facade@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.2.98.tgz#ae21dec49d0117369c568befbd6714ef62c92acc"
+  integrity sha512-HbzsxmNkO+e9H2Bo0QnOfByAX4Oin2fkdzEPJvL3ooIB/ITE46hTVXu+jATCpyHlOSoMmw+ZPxJVud7s90AgvQ==
   dependencies:
-    "@ansyn/core" "0.2.95"
-    "@ansyn/imagery" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
+    "@ansyn/core" "0.2.98"
+    "@ansyn/imagery" "0.2.98"
     "@ngx-translate/core" "^10.0.2"
     "@turf/turf" "5.1.6"
     angular2-uuid "1.1.1"
@@ -338,20 +324,17 @@
     lodash "4.17.5"
     tslib "^1.9.0"
 
-"@ansyn/menu-items@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu-items/-/menu-items-0.2.95.tgz#3af98d78fabbaeccb68da16d37ad47a9bd1ca8a5"
-  integrity sha512-jlqm8JzXMvAW3OnfmPWguMLzriIRl19LjEMhCQ+MYIhloQxFa3D5VG34MpB+VpfFNbTmo0eYs2Sk02rZOhvYoA==
+"@ansyn/menu-items@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu-items/-/menu-items-0.2.98.tgz#3c0dc1a981cc7e35b93419561f5e7164cb711892"
+  integrity sha512-jMrtut9KQfFvHow8VIMekmBHDP3ZNhP73Y25TunBiSl2pWKmbvCya1mObWI+uKjstuQ6POeivxV5c0iG4arY1g==
   dependencies:
-    "@ansyn/context" "0.2.95"
-    "@ansyn/core" "0.2.95"
-    "@ansyn/map-facade" "0.2.95"
-    "@ansyn/menu" "0.2.95"
-    "@ansyn/overlays" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
+    "@ansyn/context" "0.2.98"
+    "@ansyn/core" "0.2.98"
+    "@ansyn/map-facade" "0.2.98"
+    "@ansyn/menu" "0.2.98"
+    "@ansyn/overlays" "0.2.98"
     "@ngrx/entity" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
     "@ngx-translate/core" "^10.0.2"
     "@turf/turf" "5.1.6"
     angular2-uuid "1.1.1"
@@ -368,27 +351,21 @@
     tslib "^1.9.0"
     wellknown "0.5.0"
 
-"@ansyn/menu@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.2.95.tgz#2628916132cb711ffd31c4b4bf32a63db25815ee"
-  integrity sha512-3lfqqMQWGP0z4XZTdzNOkkcSicNfNSHzyOafGifNNJHFBs9EV9d3wwOTm/8KpOKp10Uqm4a0lhnhhy/T+yopLw==
+"@ansyn/menu@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.2.98.tgz#1895888271efcfe507a2ca858d569943e77a1e5a"
+  integrity sha512-xD+fQH+OPZkknEBv5mOGaK1Ni6E6mN5khKUoG/n+DP5HnaZtChaC03R1ttpnjRdF5oviV2/sKcJ70oP1RW05Bw==
   dependencies:
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/entity" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
     auto-subscriptions "^1.0.3"
     tslib "^1.9.0"
 
-"@ansyn/overlays@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/overlays/-/overlays-0.2.95.tgz#2bd8a685fa5940984c3c6e690518d7fcf3c93603"
-  integrity sha512-wQevQHl4eaSACdXw3+Y7kUrme87TMcaoHks3FIDAw0y8UMZC4DcGWWHfr/H9eAR6q7/oDHdEbbgwjHTdnq3Tig==
+"@ansyn/overlays@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/overlays/-/overlays-0.2.98.tgz#dc226fb47c24bccc174096e1f31fa05aee61d722"
+  integrity sha512-HTQ60n64h/YNWQADleAeiEryQPPCfThX5kv7jgvMIdkZgI0iLoWeUWLOSRNGdZdSh31ZVqEvYxRAFimkcOL38Q==
   dependencies:
-    "@ansyn/core" "0.2.95"
+    "@ansyn/core" "0.2.98"
     "@ansyn/event-drops" "0.2.81.7"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
     "@ngx-translate/core" "^10.0.2"
     "@turf/turf" "5.1.6"
     auto-subscriptions "^1.0.3"
@@ -396,21 +373,18 @@
     lodash "4.17.5"
     tslib "^1.9.0"
 
-"@ansyn/plugins@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/plugins/-/plugins-0.2.95.tgz#0b54eddfc333889dcc6e0c79ad0ff8724902ee9e"
-  integrity sha512-H44uV2Hk+j5EVcLI7f7InsgFN70CbnRv6e7WagGaZvJfJY7gwy/AKYWxW+orkXvAZOjwYv5IfdWyxDKvxO/JjA==
+"@ansyn/plugins@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/plugins/-/plugins-0.2.98.tgz#d191f4a1a897df56aa09382d75884de77523856c"
+  integrity sha512-CNLs++BIlx/eRdRVaoYPTl45YHZ7UhzdMaz7aH/7oaUoAhT71yuLpDKvQ1hAVQY5ucUp/dLCPzMw45jtB9SkKA==
   dependencies:
-    "@ansyn/context" "0.2.95"
-    "@ansyn/core" "0.2.95"
-    "@ansyn/imagery" "0.2.95"
-    "@ansyn/map-facade" "0.2.95"
-    "@ansyn/menu-items" "0.2.95"
-    "@ansyn/overlays" "0.2.95"
-    "@ansyn/status-bar" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
+    "@ansyn/context" "0.2.98"
+    "@ansyn/core" "0.2.98"
+    "@ansyn/imagery" "0.2.98"
+    "@ansyn/map-facade" "0.2.98"
+    "@ansyn/menu-items" "0.2.98"
+    "@ansyn/overlays" "0.2.98"
+    "@ansyn/status-bar" "0.2.98"
     "@turf/turf" "5.1.6"
     angular2-uuid "1.1.1"
     auto-subscriptions "^1.0.3"
@@ -419,19 +393,15 @@
     ol "^5.3.0"
     tslib "^1.9.0"
 
-"@ansyn/status-bar@0.2.95":
-  version "0.2.95"
-  resolved "https://registry.yarnpkg.com/@ansyn/status-bar/-/status-bar-0.2.95.tgz#084fa0cd9fc3a6e0cd3279af813b49e9b9ca9a65"
-  integrity sha512-Z4k4sjxaXvUJJBPhAdzEFu6cORWMLkz8hp+R16oh4pENVELmhxMIoj7OZ9rkWEjQAaNU/rMa86FpF1tgN18e1A==
+"@ansyn/status-bar@0.2.98":
+  version "0.2.98"
+  resolved "https://registry.yarnpkg.com/@ansyn/status-bar/-/status-bar-0.2.98.tgz#1bbdd6c05ce4d3faf07344bfbc4a13f5118777e4"
+  integrity sha512-V13o4CvfxcrYLy6lR9CRBz+6/AnuKNKAgaqsyq+5VH6CV6YHduLbwfdHcpb3lw1usrDKulvw1uBHp7k/g+4Q/g==
   dependencies:
-    "@ansyn/core" "0.2.95"
-    "@ngrx/core" "^1.2.0"
-    "@ngrx/effects" "^7.2.0"
-    "@ngrx/store" "^7.2.0"
+    "@ansyn/core" "0.2.98"
     "@ngx-translate/core" "^10.0.2"
     flatpickr "4.1.2"
     lodash "4.17.5"
-    ngx-treeview "^2.0.7"
     tslib "^1.9.0"
 
 "@babel/code-frame@^7.0.0":
@@ -511,11 +481,6 @@
     esutils "^2.0.2"
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
-
-"@ngrx/core@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
-  integrity sha1-iCtGq6+i4ObYh8txobLC+j5tDcY=
 
 "@ngrx/effects@^7.2.0":
   version "7.2.0"
@@ -6684,10 +6649,10 @@ ngx-bootstrap@^2.0.4:
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-2.0.5.tgz#83aab39d1e4fe811fad2b34f7927f9ce19d68daa"
   integrity sha512-IduTVb78RDVlrz2+bn6GXK/REfM/RsRnz/AENwmrgTOg1AtvahJ9qANxXRNn33Kv9GJmkOYy/MhD3DyzeMb16w==
 
-ngx-treeview@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ngx-treeview/-/ngx-treeview-2.0.7.tgz#1ed8c4ddd836d5aa78acf731dc2515cbef038f3e"
-  integrity sha512-RJsODd8qMUKDk5xhIrPsfqU/HyRXC6xvRd+R2Z/U5KuJyNqvMCAEl1ymqgV6PAP1GoXIBG7yqZGyVPPOuCExtg==
+ngx-treeview@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-treeview/-/ngx-treeview-6.0.2.tgz#2836a0f2c90999e22819527afbf07252c8e0ceb5"
+  integrity sha512-RlXRGtesdghJfLcUzk9sDUaYTAxvuyf16vn4H19If7gYvbHHCRgpdZ2md6jQCppkcjsYNJ4ZP1WkAeqxH5FcDg==
 
 nice-try@^1.0.4:
   version "1.0.5"
