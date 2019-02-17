@@ -481,6 +481,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@ngrx/core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
+  integrity sha1-iCtGq6+i4ObYh8txobLC+j5tDcY=
+
 "@ngrx/effects@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-7.2.0.tgz#8aa318ac247d8e9a428625562a124a6463e3ee2f"
