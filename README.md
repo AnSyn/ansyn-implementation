@@ -7,7 +7,7 @@ npm install @ansyn/ansyn @ansyn/assets
 ```
 or
 ```shell
-yarn add @ansyn/ansyn @ansyn/assets
+yarn add @ansyn/ansyn @ansyn/assets @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview
 ```
 (or, to update existing packages:)
 ```shell
