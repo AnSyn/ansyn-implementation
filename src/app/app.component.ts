@@ -6,6 +6,9 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import * as momentNs from 'moment';
 import {take, tap} from 'rxjs/operators';
+import {ImageryCommunicatorService} from '@ansyn/imagery';
+import {OpenLayerOSM_customSourceProviderSourceType, OpenLayerOSMCustomSourceProvider} from './osm-provider';
+import {OpenlayersMapName} from '@ansyn/plugins';
 
 const moment = momentNs;
 
@@ -107,7 +110,8 @@ export class AppComponent {
   }
 
   constructor(protected ansynApi: AnsynApi,
-              private http: HttpClient) {
+              private http: HttpClient,
+              protected imageryCommunicatorService: ImageryCommunicatorService) {
 
     this.getFeatureCollectionFromFile().subscribe(response => {
       this.featureOptions = response.featureCollection;
@@ -155,4 +159,14 @@ export class AppComponent {
       take(1)
     ).subscribe();
   }
+
+  displayCustomMapLayer() {
+
+    const com = this.imageryCommunicatorService.provide(this.ansynApi.activeMapId);
+    const provider = com.getMapSourceProvider({ mapType: OpenlayersMapName, sourceType: OpenLayerOSM_customSourceProviderSourceType });
+    provider.createAsync(this.ansynApi.mapsEntities[this.ansynApi.activeMapId]).then((layers) => {
+      com.resetView(layers[0], this.ansynApi.getMapPosition());
+    });
+  }
+
 }
