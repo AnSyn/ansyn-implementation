@@ -34,6 +34,11 @@ const mergeChanges = {
       'Filters',
       'Tools'
     ]
+  },
+  'mapFacadeConfig': {
+  'mapSearch': {
+    'active': false
+  }
   }
 };
 
