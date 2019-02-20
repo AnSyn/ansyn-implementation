@@ -1,7 +1,7 @@
 {
   "name": "angular-ansyn-implementation",
   "version": "0.0.0",
-  "dummy": "1",
+  "dummy": "2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
