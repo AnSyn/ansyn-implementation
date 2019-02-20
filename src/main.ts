@@ -1,6 +1,5 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-
 import {AppModule} from './app/app.module';
 import {environment} from './environments/environment';
 import {fetchConfigProviders} from '@ansyn/ansyn';
@@ -38,5 +37,5 @@ const mergeChanges = {
   }
 };
 
-fetchConfigProviders('assets/app.config.json', mergeChanges)
+fetchConfigProviders('assets/config/app.config.json', mergeChanges)
   .then(providers => platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
