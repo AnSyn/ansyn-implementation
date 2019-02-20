@@ -317,7 +317,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  width: 100vw;\n  height: 100vh;\n  padding: 10px;\n  box-sizing: border-box;\n}\nansyn-app {\n  display: block;\n  flex: 1;\n  border: 5px solid darkgreen;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWixhQUFhO0VBQ2IsYUFBYTtFQUNiLHNCQUFzQjtBQUN4QjtBQUNBO0VBQ0UsY0FBYztFQUNkLE9BQU87RUFDUCwyQkFBMkI7QUFDN0IiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBwYWRkaW5nOiAxMHB4O1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuYW5zeW4tYXBwIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsZXg6IDE7XG4gIGJvcmRlcjogNXB4IHNvbGlkIGRhcmtncmVlbjtcbn1cbiJdfQ== */"
+module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  width: 100vw;\n  height: 100vh;\n  padding: 10px;\n  box-sizing: border-box;\n}\n\nh1 {\n  margin: 0;\n}\n\n.top {\n  height: 12%;\n}\n\nansyn-app {\n  display: block;\n  height: 88%;\n  border: 5px solid darkgreen;\n  box-sizing: border-box;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWixhQUFhO0VBQ2IsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLFNBQVM7QUFDWDs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxXQUFXO0VBQ1gsMkJBQTJCO0VBQzNCLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5cbmgxIHtcbiAgbWFyZ2luOiAwO1xufVxuXG4udG9wIHtcbiAgaGVpZ2h0OiAxMiU7XG59XG5cbmFuc3luLWFwcCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDg4JTtcbiAgYm9yZGVyOiA1cHggc29saWQgZGFya2dyZWVuO1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -395,7 +395,7 @@ var AppComponent = /** @class */ (function () {
             photoTime: date.toISOString(),
             date: date,
             azimuth: 0,
-            isGeoRegistered: false,
+            isGeoRegistered: _ansyn_core__WEBPACK_IMPORTED_MODULE_2__["GeoRegisteration"].notGeoRegistered,
             sourceType: 'STATIC_IMAGE',
             tag: {
                 imageData: {
@@ -590,10 +590,16 @@ var mergeChanges = {
         'menuItems': [
             'Filters',
             'Tools'
-        ]
+        ],
+        'isCollapsible': true
+    },
+    'mapFacadeConfig': {
+        'mapSearch': {
+            'active': false
+        }
     }
 };
-Object(_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_4__["fetchConfigProviders"])('assets/app.config.json', mergeChanges)
+Object(_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_4__["fetchConfigProviders"])('assets/config/app.config.json', mergeChanges)
     .then(function (providers) { return Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])(providers).bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"]).catch(function (err) { return console.log(err); }); });
 
 
