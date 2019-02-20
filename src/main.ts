@@ -33,7 +33,8 @@ const mergeChanges = {
     'menuItems': [
       'Filters',
       'Tools'
-    ]
+    ],
+    'isCollapsible': true
   },
   'mapFacadeConfig': {
   'mapSearch': {
