@@ -3,11 +3,11 @@
 ## Installation
 
 ```shell
-npm install @ansyn/ansyn @ansyn/assets
+npm install @ansyn/ansyn @ansyn/assets @ansyn/core @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview ol cesium d3 @angular/cdk @angular/material
 ```
 or
 ```shell
-yarn add @ansyn/ansyn @ansyn/assets @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview
+yarn add @ansyn/ansyn @ansyn/assets @ansyn/core @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview ol cesium d3 @angular/cdk @angular/material
 ```
 (or, to update existing packages:)
 ```shell
