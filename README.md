@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-npm install @ansyn/ansyn @ansyn/assets @ansyn/core @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview ol cesium d3 @angular/cdk @angular/material
+npm install @ansyn/ansyn @ansyn/imagery @ansyn/map-facade @ansyn/ol @ansyn/menu @ngrx/core @ngrx/store @ngrx/effects @ngrx/entity ngx-treeview ol cesium d3 @angular/cdk @angular/material
 ```
 or
 ```shell
@@ -21,7 +21,7 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
              "assets": [
                 {
                   "glob": "**/*",
-                  "input": "./node_modules/@ansyn/assets",
+                  "input": "./node_modules/@ansyn/ansyn/assets",
                   "output": "/assets"
                 },
                 {
@@ -31,7 +31,7 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
                 }
              ],
              "styles": [
-               "node_modules/@ansyn/assets/styles/styles.css"
+               "node_modules/@ansyn/ansyn/assets/styles/styles.css"
              ],
              "scripts": [
                "node_modules/cesium/Build/Cesium/Cesium.js"
