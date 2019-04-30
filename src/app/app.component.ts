@@ -1,11 +1,12 @@
-import {Component} from '@angular/core';
-import {AnsynApi} from '@ansyn/ansyn';
-import {LayoutKey, layoutOptions, IOverlay, GeoRegisteration} from '@ansyn/core';
-import {FeatureCollection} from 'geojson';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { AnsynApi, GeoRegisteration, IOverlay } from '@ansyn/ansyn';
+import { FeatureCollection } from 'geojson';
 import * as momentNs from 'moment';
-import {take, tap} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
+import { layoutOptions } from '@ansyn/map-facade';
+import { LayoutKey } from '@ansyn/map-facade';
 
 const moment = momentNs;
 
@@ -104,7 +105,7 @@ export class AppComponent {
   }
 
   setPositionWithRadius() {
-    this.ansynApi.setMapPositionByRadius({type: 'Point', coordinates: [-117.914, 33.8117]}, 100, true);
+    this.ansynApi.setMapPositionByRadius({ type: 'Point', coordinates: [-117.914, 33.8117] }, 100, true);
   }
 
   setOverlays() {
