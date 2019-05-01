@@ -88,14 +88,6 @@
         "facets": {
           "showOnlyFavorites": false,
           "filters": [
-            {
-              "fieldName": "isGeoRegistered",
-              "metadata": {
-                "displayTrue": true,
-                "displayFalse": false
-              },
-              "type": "Boolean"
-            }
           ]
         }
       }
