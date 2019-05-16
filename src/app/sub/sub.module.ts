@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SubComponent } from './sub.component';
 import { AnsynModule } from '@ansyn/ansyn';
 import { CommonModule } from '@angular/common';
+import { SubRoutingModule } from './sub-routing.module';
 
 @NgModule({
   declarations: [
@@ -9,11 +10,8 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     AnsynModule.component(),
-    CommonModule
-  ],
-  providers: [],
-  exports: [
-    SubComponent
+    CommonModule,
+    SubRoutingModule
   ]
 })
 export class SubModule {
