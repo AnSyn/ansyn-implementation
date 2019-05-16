@@ -1,0 +1,17 @@
+<div class="top">
+
+  <h1> Angular 2 implementation </h1>
+  <select (change)="setLayout($event.target.value)">
+    <option *ngFor="let layout of layoutKeys">{{ layout }}</option>
+  </select>
+
+  <button (click)="setFeatureCollection()">add features</button>
+  <button (click)="deleteFeatureCollection()">remove features</button>
+  <button (click)="setPositionWithRadius()">set position + radius + search</button>
+  <button (click)="setOverlays()">set overlays</button>
+  <button (click)="displayOverlay()">display overlay</button>
+  <button (click)="displayTwoOverlays()">display two overlays</button>
+
+</div>
+
+<ansyn-app></ansyn-app>

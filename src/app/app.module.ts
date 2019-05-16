@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AnsynModule } from '@ansyn/ansyn';
+import { SubModule } from '../sub/sub.module';
 
 @NgModule({
   declarations: [
@@ -9,9 +9,10 @@ import { AnsynModule } from '@ansyn/ansyn';
   ],
   imports: [
     BrowserModule,
-    AnsynModule.component()
+    SubModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

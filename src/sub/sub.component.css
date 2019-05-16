@@ -6,3 +6,8 @@
   padding: 10px;
   box-sizing: border-box;
 }
+ansyn-app {
+  display: block;
+  flex: 1;
+  border: 5px solid darkgreen;
+}
