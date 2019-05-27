@@ -342,13 +342,13 @@ module.exports = "<div class=\"top\">\n\n  <h1> Angular 2 implementation </h1>\n
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ansyn/ansyn */ "./node_modules/@ansyn/ansyn/fesm5/ansyn-ansyn.js");
-/* harmony import */ var _ansyn_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ansyn/core */ "./node_modules/@ansyn/core/fesm5/ansyn-core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ansyn/ansyn */ "./node_modules/@ansyn/ansyn/fesm5/ansyn-ansyn.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _ansyn_map_facade__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ansyn/map-facade */ "./node_modules/@ansyn/map-facade/fesm5/ansyn-map-facade.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -364,13 +364,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var moment = moment__WEBPACK_IMPORTED_MODULE_4__;
+var moment = moment__WEBPACK_IMPORTED_MODULE_3__;
 var AppComponent = /** @class */ (function () {
     function AppComponent(ansynApi, http) {
         var _this = this;
         this.ansynApi = ansynApi;
         this.http = http;
-        this.layoutKeys = Array.from(_ansyn_core__WEBPACK_IMPORTED_MODULE_2__["layoutOptions"].keys());
+        this.layoutKeys = Array.from(_ansyn_map_facade__WEBPACK_IMPORTED_MODULE_5__["layoutOptions"].keys());
         this.overlays = [
             this.overlay('000', 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Reeipublic_Banana.gif', 576, 1024, this.calcDate(0)),
             this.overlay('111', 'https://image.shutterstock.com/image-vector/cool-comic-book-bubble-text-450w-342092249.jpg', 470, 450, this.calcDate(1)),
@@ -395,7 +395,7 @@ var AppComponent = /** @class */ (function () {
             photoTime: date.toISOString(),
             date: date,
             azimuth: 0,
-            isGeoRegistered: _ansyn_core__WEBPACK_IMPORTED_MODULE_2__["GeoRegisteration"].notGeoRegistered,
+            isGeoRegistered: _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_2__["GeoRegisteration"].notGeoRegistered,
             sourceType: 'STATIC_IMAGE',
             tag: {
                 imageData: {
@@ -447,20 +447,20 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.displayTwoOverlays = function () {
         var _this = this;
-        this.ansynApi.changeMapLayout('layout2').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function () {
+        this.ansynApi.changeMapLayout('layout2').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(function () {
             _this.ansynApi.setOverlays(_this.overlays);
             _this.ansynApi.displayOverLay(_this.overlays[1], 1);
             _this.ansynApi.displayOverLay(_this.overlays[2], 0);
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["take"])(1)).subscribe();
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1)).subscribe();
     };
     AppComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_1__["AnsynApi"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+        __metadata("design:paramtypes", [_ansyn_ansyn__WEBPACK_IMPORTED_MODULE_2__["AnsynApi"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -479,10 +479,11 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ansyn/ansyn */ "./node_modules/@ansyn/ansyn/fesm5/ansyn-ansyn.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ansyn/ansyn */ "./node_modules/@ansyn/ansyn/fesm5/ansyn-ansyn.js");
+/* harmony import */ var _ansyn_ol__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ansyn/ol */ "./node_modules/@ansyn/ol/fesm5/ansyn-ol.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -493,20 +494,32 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_3__["AnsynModule"].component()
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _ansyn_ansyn__WEBPACK_IMPORTED_MODULE_2__["AnsynModule"].component()
             ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+            providers: [
+                {
+                    provide: _ansyn_ol__WEBPACK_IMPORTED_MODULE_3__["OL_CONFIG"],
+                    useValue: {}
+                },
+                {
+                    provide: _ansyn_ol__WEBPACK_IMPORTED_MODULE_3__["OL_PLUGINS_CONFIG"],
+                    useValue: {
+                        Annotations: {}
+                    }
+                },
+            ],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -584,12 +597,17 @@ var mergeChanges = {
         }
     },
     'coreConfig': {
-        'noInitialSearch': true
+        'noInitialSearch': true,
+        'isFooterCollapsible': true
+    },
+    'layersManagerConfig': {
+        'schema': null
     },
     'menuConfig': {
         'menuItems': [
             'Filters',
-            'Tools'
+            'Tools',
+            'Data Layers'
         ],
         'isCollapsible': true
     },
