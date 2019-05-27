@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { AnsynModule } from '@ansyn/ansyn';
-import { OL_CONFIG, OL_PLUGINS_CONFIG, OpenLayersMap, AnnotationsVisualizer, OpenLayerBingSourceProvider } from '@ansyn/ol';
-import { ImageryModule } from '@ansyn/imagery';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AnsynModule} from '@ansyn/ansyn';
+import {OL_CONFIG, OL_PLUGINS_CONFIG} from '@ansyn/ol';
+import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
@@ -27,4 +26,5 @@ import { ImageryModule } from '@ansyn/imagery';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

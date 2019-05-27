@@ -27,12 +27,17 @@ const mergeChanges = {
     }
   },
   'coreConfig': {
-    'noInitialSearch': true
+    'noInitialSearch': true,
+    'isFooterCollapsible': true
+  },
+  'layersManagerConfig': {
+    'schema': null
   },
   'menuConfig': {
     'menuItems': [
       'Filters',
-      'Tools'
+      'Tools',
+      'Data Layers'
     ],
     'isCollapsible': true
   },
