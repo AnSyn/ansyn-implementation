@@ -241,10 +241,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ansyn/ansyn@^0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.3.32.tgz#d09f4440e603ddc28047bcc70234bf1ffbea480f"
-  integrity sha512-FZs3zrGirVKpfp3UKXZcxky2j0G4tGIn1S77GvkPuO5qxLxTixDOtrOY6NINs2vfafCopGYpg/MOAoAQLhnwgg==
+"@ansyn/ansyn@^0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.3.33.tgz#2a82bdf9da03e1605f5f96b915c47dc8fb6e9827"
+  integrity sha512-Kn4q2r65hBr4Cqo8aP8LCIORR6jhw/q9Ci2PrFwKNdjE2y7Xug7QcroDSe3PFk3jeRlGSgTS8PTciA1T5jtR/g==
   dependencies:
     "@turf/turf" "^5.1.6"
     file-saver "^1.3.8"
@@ -268,10 +268,10 @@
   resolved "https://registry.yarnpkg.com/@ansyn/event-drops/-/event-drops-0.2.8-1.9.tgz#70b774a428e7d647f7974e73d643c9d680655184"
   integrity sha512-bQIu0SslBrkmGmoHw+Wers4r67PvLPRaLnroLm9RpLYdhygoajvt8Pa8KcRWG61fOZu/XeNW+EJrLsjhHRDVkw==
 
-"@ansyn/imagery-cesium@0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.3.32.tgz#448ca531ba3de27eeecc9906b461534695061475"
-  integrity sha512-fatIzd1UqW9oHuU3laYqCBWc9v6+4g4Xf0kuQoysoI+v6YEofSe1bE70rHPssHbMyDGOYXhPh0uhDcuj0bwehQ==
+"@ansyn/imagery-cesium@0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.3.33.tgz#1adff149e7a63b7a73d129e85dc00cfde7319952"
+  integrity sha512-z/fAMHuuNKUYG3IVNaixmCjzt1OeNtSKZtbwk5CvLn8nsGmz62Ig+SuHzGoa2RjVYhwlDFEsAU54Ns3Ax/+vwg==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
@@ -280,19 +280,19 @@
     ngx-color-picker "^7.5.0"
     tslib "^1.9.0"
 
-"@ansyn/imagery@0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.3.32.tgz#9ce1acd75f2f1cca3edbd55535a3ce0ec8cde1a5"
-  integrity sha512-Y6daK2/NOX8mZu33nzXy3CaIYmP9Gf857/hzJmgPYmp7mTBK23W2ZnhWCLDowJ9jsyncDJnjZHJv1gn92IrieA==
+"@ansyn/imagery@0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.3.33.tgz#48d2c7a2e037300dfadc84bb603f01864292f729"
+  integrity sha512-D0VHw45xZhb8vT9dj/l3atS2BH4cszfSKcHDnBSRl0PbN0GESqARKPT4qh74VsfBydNQhFKxvuVT1VyCBdE0MA==
   dependencies:
     "@turf/turf" "^5.1.6"
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
-"@ansyn/map-facade@0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.3.32.tgz#c6a89329b27851d7d8f5b4dfd65c4ce8a3b97a4f"
-  integrity sha512-Xsn0RFDm736BGThZzW5YLH8KDmVIEOggcHVjKiWXytOPYVnHMx4UHGIyLYk8upZA8A/C/1ioXqISjwCQlYTiUQ==
+"@ansyn/map-facade@0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.3.33.tgz#ed385a9b52793bca739793e0624df6e1fd346c10"
+  integrity sha512-i+0Z6FGO18i157XisSdLcI+OJ2uU0VJRuiRpbl4a9ECEy/Rk0j7+qRFWNdVrs6pVJVZV1EDc3TvuoTE1ysOqLg==
   dependencies:
     "@ngx-translate/core" "^10.0.2"
     "@turf/turf" "^5.1.6"
@@ -301,18 +301,18 @@
     lodash "^4.17.11"
     tslib "^1.9.0"
 
-"@ansyn/menu@0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.3.32.tgz#b338b0eaa152da1ea71d7e986393ae7e6ca325d2"
-  integrity sha512-hz/oMTIe/Se4cIt6LBZofMIWTkl1s//NS4ReTeq3uK5JuKr4il+JeVhBDU8DUg61QljrpIYowjAfYPz4nAepCg==
+"@ansyn/menu@0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.3.33.tgz#3d93f5e000dce942d7889aa61d6a3dc6b4437fa6"
+  integrity sha512-xOaW86Ujz+5weDCuxT4JryJSUy5OhcOQpk2VqI6zpv3irilxhF6OoJ8MnGwuz+T+sLFeXjK+gbA98u7bAuBvDw==
   dependencies:
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
-"@ansyn/ol@^0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.3.32.tgz#aedbf6e070e5a19084a763ff3e20bd58f5545d44"
-  integrity sha512-8+bqWdc7TWYeNHXg3pk6bVcqmlKZIjC1kzQmWwmNHUdicboyOGodfjKyEEAWhyq7afnTVpTsLBBQnSKyiEJrBg==
+"@ansyn/ol@^0.3.33":
+  version "0.3.33"
+  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.3.33.tgz#5567a7bfc338b6e1685ffee24381b80510789e7b"
+  integrity sha512-RppiAc2h1ECQeSbaYQEu/cv1E84WsDtZr4DltJZtWOrF1c+rCq6Z5CpFGJtyWagsmiYHx+VIQLy3BinspoyVHQ==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
