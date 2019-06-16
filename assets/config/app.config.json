@@ -334,7 +334,8 @@
 	   	}
     },
 	 "httpTimeout": "3000",
-	 "isFooterCollapsible": false
+	 "isFooterCollapsible": false,
+	 "enable3D": true
   },
   "olConfig": {
   	 "needToUseLayerExtent": false,
@@ -349,7 +350,7 @@
   	}
   },
   "menuConfig": {
-    "menuItems": ["Filters", "Data Layers", "Tools"],
+    "menuItems": ["Cases", "Filters", "Data Layers", "Tools", "Uploads", "Algorithms", "Sandbox" ,"Contact-Us","Help"],
     "path": "assets/logo.svg",
     "color": "white",
     "background": "red",
@@ -364,6 +365,7 @@
   },
   "loginConfig": {
   	"baseUrl": "http://platform.ansyn.io:9001/api/v1/login",
+  	"title": "AnSyn",
   	"active":  false,
   	"authorizedPath": "/"
   },

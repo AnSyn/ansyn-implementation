@@ -606,8 +606,8 @@ var mergeChanges = {
     'menuConfig': {
         'menuItems': [
             'Filters',
-            'Tools',
-            'Data Layers'
+            'Data Layers',
+            'Tools'
         ],
         'isCollapsible': true
     },
