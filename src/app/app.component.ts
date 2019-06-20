@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 import { take, tap } from 'rxjs/operators';
 import { layoutOptions } from '@ansyn/map-facade';
 import { LayoutKey } from '@ansyn/map-facade';
+import * as packageJson from 'root/package.json';
+
 
 const moment = momentNs;
 
@@ -29,6 +31,7 @@ export class AppComponent {
     this.overlay('333', 'https://image.shutterstock.com/z/stock-vector-cool-milkshake-190524542.jpg',
       1600, 1500, this.calcDate(3))
   ];
+  version: string = (<any>packageJson).dependencies['@ansyn/ansyn'].replace(/[/^/~]/g , '');
 
   calcDate(days: number) {
     return moment().subtract(days, 'day').toDate();

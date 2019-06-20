@@ -87,6 +87,8 @@ export class AppComponent {
 }
 ```
 
+Learn more about [AnsynApi](https://github.com/AnSyn/ansyn/wiki/Ansyn-Package).
+
 on `app.component.css`:
 
 The element `ansyn-app` has to receive height. It can be explicit height, or implicit like "display:flex" + "flex:1"
@@ -100,3 +102,27 @@ ansyn-app {
 }
 ```
 
+on `main.ts`:
+
+You can provide an object that override the default configuration of your Ansyn app.(let's say we called it overrideConfig) , 
+then you need to pass it to the `fetchConfigProviders` function from `@ansyn/ansyn` with the path of the original configuration('assets/config/app.config.json') which return you a promise with provider then pass it to `platformBrowserDynamic` function.
+```typescript
+fetchConfigProviders('assets/config/app.config.json', overrideConfig)
+  .then(providers => platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
+``` 
+Learn more about `Ansyn` [configuration](https://github.com/AnSyn/ansyn/wiki/Ansyn-configuration).
+
+### Add custome menu item
+
+You could add your own custom menu item, in a few simple step.
+
+1. Create a new component for your menu item.
+2. In `main.ts` before you call `fetchConfigProviders` tell `ansynConfig.ansynMenuItems`about your custom menu item by pushing him an object look like:
+  ```typescript
+  {
+  name: 'THE_MENU_ITEM_NAME',
+  component: YOUR_COMPONENT,
+  iconClass: 'YOUR_MENU_ITEM_ICON_CLASS'
+  }
+  ```
+  next add your menu item name to `menuConfig.menuItems`
