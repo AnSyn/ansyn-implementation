@@ -287,6 +287,17 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: name, version, scripts, private, dependencies, devDependencies, default */
+/***/ (function(module) {
+
+module.exports = {"name":"angular-ansyn-implementation","version":"0.0.0","scripts":{"ng":"ng","start":"ng serve","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e","log":"git log master --pretty=format:\\\"%an\\\",\\\"%ai\\\",\\\"%s\\\",\\\"%H\\\" > log.csv && echo Commiter, Date, Message, Hash | cat - log.csv > log2.csv && mv log2.csv log.csv","predeploy":"npm run build -- --base-href=https://ansyn.github.io/angular-ansyn-implementation/ --deploy-url=https://ansyn.github.io/angular-ansyn-implementation/","deploy":"gh-pages --repo https://$GITHUB_TOKEN@github.com/AnSyn/angular-ansyn-implementation.git -d dist/angular-ansyn-implementation"},"private":true,"dependencies":{"@angular/animations":"^7.2.4","@angular/cdk":"^7.3.5","@angular/common":"^7.2.4","@angular/compiler":"^7.2.4","@angular/core":"^7.2.4","@angular/forms":"^7.2.4","@angular/http":"^7.2.4","@angular/material":"^7.3.5","@angular/platform-browser":"^7.2.4","@angular/platform-browser-dynamic":"^7.2.4","@angular/router":"^7.2.4","@ansyn/ansyn":"^0.3.37","@ansyn/event-drops":"^0.2.8-1.9","@ansyn/imagery":"^0.3.37","@ansyn/imagery-cesium":"^0.3.37","@ansyn/map-facade":"^0.3.37","@ansyn/menu":"^0.3.37","@ansyn/ol":"^0.3.37","@ngrx/core":"^1.2.0","@ngrx/effects":"^7.3.0","@ngrx/entity":"^7.3.0","@ngrx/store":"^7.3.0","@types/geojson":"^7946.0.4","@ngx-translate/core":"^10.0.2","cesium":"^1.55.0","core-js":"^2.5.4","d3":"^5.5.0","geojson":"^0.5.0","ngx-treeview":"^6.0.2","ol":"^5.3.1","rxjs":"^6.4.0","zone.js":"^0.8.29"},"devDependencies":{"@angular-devkit/build-angular":"^0.12.3","@angular/cli":"^7.3.1","@angular/compiler-cli":"^7.2.4","@angular/language-service":"^7.2.4","@types/jasmine":"~2.8.6","@types/jasminewd2":"~2.0.3","@types/node":"~8.9.4","codelyzer":"~4.2.1","gh-pages":"^2.0.1","jasmine-core":"~2.99.1","jasmine-spec-reporter":"~4.2.1","karma":"~1.7.1","karma-chrome-launcher":"~2.2.0","karma-coverage-istanbul-reporter":"~2.0.0","karma-jasmine":"~1.1.1","karma-jasmine-html-reporter":"^0.2.2","protractor":"~5.3.0","ts-node":"~5.0.1","tslint":"~5.9.1","typescript":"~3.2.4"}};
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -328,7 +339,7 @@ module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  width:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"top\">\n\n  <h1> Angular 2 implementation </h1>\n  <select (change)=\"setLayout($event.target.value)\">\n    <option *ngFor=\"let layout of layoutKeys\">{{ layout }}</option>\n  </select>\n\n  <button (click)=\"setFeatureCollection()\">add features</button>\n  <button (click)=\"deleteFeatureCollection()\">remove features</button>\n  <button (click)=\"setPositionWithRadius()\">set position + radius + search</button>\n  <button (click)=\"setOverlays()\">set overlays</button>\n  <button (click)=\"displayOverlay()\">display overlay</button>\n  <button (click)=\"displayTwoOverlays()\">display two overlays</button>\n\n</div>\n\n<ansyn-app></ansyn-app>\n"
+module.exports = "<div class=\"top\">\n\n  <h1> Angular 2 implementation </h1>\n  <select (change)=\"setLayout($event.target.value)\">\n    <option *ngFor=\"let layout of layoutKeys\">{{ layout }}</option>\n  </select>\n\n  <button (click)=\"setFeatureCollection()\">add features</button>\n  <button (click)=\"deleteFeatureCollection()\">remove features</button>\n  <button (click)=\"setPositionWithRadius()\">set position + radius + search</button>\n  <button (click)=\"setOverlays()\">set overlays</button>\n  <button (click)=\"displayOverlay()\">display overlay</button>\n  <button (click)=\"displayTwoOverlays()\">display two overlays</button>\n\n</div>\n\n<ansyn-app [version]=\"version\"></ansyn-app>\n"
 
 /***/ }),
 
@@ -349,6 +360,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _ansyn_map_facade__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ansyn/map-facade */ "./node_modules/@ansyn/map-facade/fesm5/ansyn-map-facade.js");
+/* harmony import */ var root_package_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! root/package.json */ "./package.json");
+var root_package_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! root/package.json */ "./package.json", 1);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -358,6 +371,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -377,6 +391,7 @@ var AppComponent = /** @class */ (function () {
             this.overlay('222', 'https://imgs.xkcd.com/comics/online_communities.png', 1024, 968, this.calcDate(2)),
             this.overlay('333', 'https://image.shutterstock.com/z/stock-vector-cool-milkshake-190524542.jpg', 1600, 1500, this.calcDate(3))
         ];
+        this.version = root_package_json__WEBPACK_IMPORTED_MODULE_6__["dependencies"]['@ansyn/ansyn'].replace(/[/^/~]/g, '');
         this.getFeatureCollectionFromFile().subscribe(function (response) {
             _this.featureOptions = response.featureCollection;
         });
