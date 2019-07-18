@@ -11,6 +11,10 @@
   <button (click)="setOverlays()">set overlays</button>
   <button (click)="displayOverlay()">display overlay</button>
   <button (click)="displayTwoOverlays()">display two overlays</button>
+  <button [class.isPress]="mouseShadowOutputSubscription" (click)="getMouseShadowPoint()">
+    {{mouseShadowOutputSubscription? 'disable get mouse coordinate' : 'enable get mouse coordinate'}}
+  </button>
+  <button [class.isPress]="mouseShadowOutputSubscription" (click)="setMouseShadowPoint()">get mouse coordinate</button>
 
 </div>
 
