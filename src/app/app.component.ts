@@ -87,6 +87,10 @@ export class AppComponent {
     this.getFeatureCollectionFromFile().subscribe(response => {
       this.featureOptions = response.featureCollection;
     });
+
+    this.ansynApi.status.subscribe( (map) => {
+      console.log(map);
+    });
   }
 
   setFeatureCollection(): void {
@@ -132,9 +136,7 @@ export class AppComponent {
     if (this.mouseShadowOutputSubscription) {
       this.mouseShadowOutputSubscription.unsubscribe();
       this.mouseShadowOutputSubscription = undefined;
-      this.ansynApi.store.dispatch({type: 'UPDATE_TOOLS_FLAGS', payload: [{key: 'shadowMouse', value: false}]});
     } else {
-      this.ansynApi.store.dispatch({type: 'UPDATE_TOOLS_FLAGS', payload: [{key: 'shadowMouse', value: true}]});
       this.mouseShadowOutputSubscription = this.ansynApi.onShadowMouseProduce$.pipe(
         tap(coordinate => console.log('Shadow mouse: ' + coordinate))
       ).subscribe();
