@@ -88,8 +88,8 @@ export class AppComponent {
       this.featureOptions = response.featureCollection;
     });
 
-    this.ansynApi.status.subscribe( (map) => {
-      console.log(map);
+    this.ansynApi.onReady.subscribe( (ready) => {
+      console.log('ready: ' + ready);
     });
   }
 
