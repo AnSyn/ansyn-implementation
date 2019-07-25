@@ -15,7 +15,7 @@ yarn upgrade @ansyn/ansyn @ansyn/assets
 ```
 
 ## Usage
-add ansyn to your assets / styles on `angular.json` file,  under yourProject/architect/build/options:
+1.add ansyn to your assets / styles on `angular.json` file,  under yourProject/architect/build/options:
 
 ```json
              "assets": [
@@ -38,7 +38,7 @@ add ansyn to your assets / styles on `angular.json` file,  under yourProject/arc
              ]
 ```
 
-on `main.ts` file:
+2.on `main.ts` file:
 
 ```typescript
 import { fetchConfigProviders } from '@ansyn/ansyn';
@@ -46,7 +46,16 @@ import { fetchConfigProviders } from '@ansyn/ansyn';
 fetchConfigProviders('assets/config/app.config.json').then(providers =>  platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
 ```
 
-on `app.module.ts`:
+You can provide an object that override the default configuration of your Ansyn app.(let's say we called it overrideConfig) , 
+then you need to pass it to the `fetchConfigProviders` function from `@ansyn/ansyn` with the path of the original configuration('assets/config/app.config.json') which return you a promise with provider then pass it to `platformBrowserDynamic` function.
+```typescript
+fetchConfigProviders('assets/config/app.config.json', overrideConfig)
+  .then(providers => platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
+``` 
+Learn more about `Ansyn` [configuration](https://github.com/AnSyn/ansyn/wiki/Ansyn-configuration).
+
+
+3.on `app.module.ts`:
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -67,29 +76,15 @@ import { AnsynModule } from '@ansyn/ansyn';
 export class AppModule { }
 ```
 
-on `app.component.html`:
+4.on `app.component.html`:
 
 ```html
   ...
   <ansyn-app></ansyn-app>
   ...
 ```
-`AnsynApi` service on `ansyn.component.ts`:
-```typescript
-import { AnsynApi } from '@ansyn/ansyn';
 
-@Component({
-...
-})
-export class AppComponent {
-  constructor(protected ansynApi: AnsynApi) {
-  }
-}
-```
-
-Learn more about [AnsynApi](https://github.com/AnSyn/ansyn/wiki/Ansyn-Package).
-
-on `app.component.css`:
+5.on `app.component.css`:
 
 The element `ansyn-app` has to receive height. It can be explicit height, or implicit like "display:flex" + "flex:1"
 For example:
@@ -102,15 +97,20 @@ ansyn-app {
 }
 ```
 
-on `main.ts`:
-
-You can provide an object that override the default configuration of your Ansyn app.(let's say we called it overrideConfig) , 
-then you need to pass it to the `fetchConfigProviders` function from `@ansyn/ansyn` with the path of the original configuration('assets/config/app.config.json') which return you a promise with provider then pass it to `platformBrowserDynamic` function.
+6.inject `AnsynApi` service on `ansyn.component.ts`:
 ```typescript
-fetchConfigProviders('assets/config/app.config.json', overrideConfig)
-  .then(providers => platformBrowserDynamic(providers).bootstrapModule(AppModule).catch(err => console.log(err)));
-``` 
-Learn more about `Ansyn` [configuration](https://github.com/AnSyn/ansyn/wiki/Ansyn-configuration).
+import { AnsynApi } from '@ansyn/ansyn';
+
+@Component({
+...
+})
+export class AppComponent {
+  constructor(protected ansynApi: AnsynApi) {
+  }
+}
+```
+Learn more about [AnsynApi](https://github.com/AnSyn/ansyn/wiki/Ansyn-Package#AnsynApi).
+
 
 ### Add custome menu item
 

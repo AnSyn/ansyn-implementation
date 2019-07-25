@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AnsynApi, GeoRegisteration, IOverlay } from '@ansyn/ansyn';
 import { FeatureCollection } from 'geojson';
 import * as momentNs from 'moment';
-import { Observable } from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import { take, tap } from 'rxjs/operators';
 import { layoutOptions } from '@ansyn/map-facade';
 import { LayoutKey } from '@ansyn/map-facade';
@@ -20,6 +20,7 @@ const moment = momentNs;
 export class AppComponent {
   layoutKeys: LayoutKey[] = Array.from(layoutOptions.keys());
   featureOptions: FeatureCollection<any>;
+  mouseShadowOutputSubscription: Subscription;
 
   overlays = [
     this.overlay('000', 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Reeipublic_Banana.gif',
@@ -86,8 +87,9 @@ export class AppComponent {
     this.getFeatureCollectionFromFile().subscribe(response => {
       this.featureOptions = response.featureCollection;
     });
-    this.ansynApi.getActiveCenter$.subscribe((center) => {
-      console.log(center);
+
+    this.ansynApi.onReady.subscribe( (ready) => {
+      console.log('ready: ' + ready);
     });
   }
 
@@ -128,5 +130,20 @@ export class AppComponent {
       }),
       take(1)
     ).subscribe();
+  }
+
+  getMouseShadowPoint() {
+    if (this.mouseShadowOutputSubscription) {
+      this.mouseShadowOutputSubscription.unsubscribe();
+      this.mouseShadowOutputSubscription = undefined;
+    } else {
+      this.mouseShadowOutputSubscription = this.ansynApi.onShadowMouseProduce$.pipe(
+        tap(coordinate => console.log('Shadow mouse: ' + coordinate))
+      ).subscribe();
+    }
+  }
+
+  setMouseShadowPoint() {
+    this.ansynApi.setOutSourceMouseShadow([-122.3857620823084, 37.62041171284878]);
   }
 }
