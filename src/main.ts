@@ -30,6 +30,11 @@ const mergeChanges = {
     'noInitialSearch': true,
     'isFooterCollapsible': true
   },
+  'toolsConfig': {
+    'ShadowMouse': {
+      'forceSendShadowMousePosition': true
+    }
+  },
   'layersManagerConfig': {
     'schema': null
   },
