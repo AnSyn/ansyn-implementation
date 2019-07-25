@@ -69,7 +69,7 @@
 				 "flags": {},
 				 "worldView": {
 				   "mapType": "openLayersMap",
-				   "sourceType": "BING"
+				   "sourceType": "ESRI_4326"
 				 },
 				 "id": "af3b94d2-03ff-44e6-9f73-10d386aff493"
 			   }
@@ -178,7 +178,7 @@
   },
   "mapProvidersConfig": {
   	"openLayersMap": {
-  		"defaultMapSource": "BING"
+  		"defaultMapSource": "ESRI_4326"
   	},
   	"CesiumMap": {
   		"defaultMapSource": "CESIUM_BING"
@@ -295,7 +295,8 @@
       }
     ],
     "ShadowMouse": {
-    	"activeByDefault": false
+    	"activeByDefault": false,
+    	"forceSendShadowMousePosition": false
     }
   },
   "loggerConfig": {
@@ -351,7 +352,7 @@
   	}
   },
   "menuConfig": {
-    "menuItems": ["Cases", "Filters", "Data Layers", "Tools", "Uploads", "Algorithms", "Sandbox" ,"Contact-Us","Help"],
+    "menuItems": null,
     "path": "assets/logo.svg",
     "color": "white",
     "background": "red",
