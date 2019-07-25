@@ -3,10 +3,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AnsynModule} from '@ansyn/ansyn';
 import {OL_CONFIG, OL_PLUGINS_CONFIG} from '@ansyn/ol';
 import {AppComponent} from './app.component';
+import {CustomMenuComponent} from './menus/custom-menu/custom-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomMenuComponent
   ],
   imports: [
     BrowserModule,
