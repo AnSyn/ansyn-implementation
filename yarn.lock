@@ -241,12 +241,13 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ansyn/ansyn@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.3.40.tgz#251f92561f41616892cbde58aca091c252cf7eb6"
-  integrity sha512-uxyWeOB5EZbOPjnvxLflRUE2K+LUflyaSzBUbUwZsVwdsdJiDoMJ96EvL5uPor1JOoEl0t/f7nOzmDmK/W7F2Q==
+"@ansyn/ansyn@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.6.0.tgz#af0356de3892b052bd5806bdfda67331d7af7557"
+  integrity sha512-5LQ5OhlFabTT6cVy31tzHZYCjhsvYG1otjca3bdzduv4vtPg6tX1i6NBFu2BDQvnBfxanIvFp4jhuIbMzVGX7A==
   dependencies:
     "@turf/turf" "^5.1.6"
+    auto-subscriptions "^2.0.5"
     file-saver "^1.3.8"
     flatpickr "^4.5.7"
     font-awesome "^4.7.0"
@@ -268,10 +269,10 @@
   resolved "https://registry.yarnpkg.com/@ansyn/event-drops/-/event-drops-0.2.8-1.9.tgz#70b774a428e7d647f7974e73d643c9d680655184"
   integrity sha512-bQIu0SslBrkmGmoHw+Wers4r67PvLPRaLnroLm9RpLYdhygoajvt8Pa8KcRWG61fOZu/XeNW+EJrLsjhHRDVkw==
 
-"@ansyn/imagery-cesium@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.3.40.tgz#3f5428f2505c1be1ba86b43271ee3d998ce74341"
-  integrity sha512-lVGMMSJ45cVANya+b+oQbeviY6brEJmcwjZVEPzPit9JySr2/UQ07lNzJXWJFnVMC5pwAZF/mRrF/0h/W+umVQ==
+"@ansyn/imagery-cesium@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.6.0.tgz#8b4d2b28d56e948a92eeb77f1f9478c0fe9268da"
+  integrity sha512-l5fx+iB7Jto3xOgxduGbCEc7uFmRz7LJwvzqn3FjJt022O8yvn4H02yjUW5l/gkuGE9dh/Phk/41e4VxeKeRSA==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
@@ -280,19 +281,19 @@
     ngx-color-picker "^7.5.0"
     tslib "^1.9.0"
 
-"@ansyn/imagery@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.3.40.tgz#af641e90b764fd257c1328afcc06b285f03f8089"
-  integrity sha512-hXmTrKGAVxPH6zLbhyIV9EVZ57175R+Gc4CTmtBMSs4M8oL7H3Rf8fpsLnmdGIvY+5+yMLi1oPJ53c54aMY3ZQ==
+"@ansyn/imagery@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.6.0.tgz#7cd263caa0eb9c34419f9a4802f9ee837fffaa79"
+  integrity sha512-NU2af8vGmIl5kwvmQWc8ZyEUUuC4kubiwwWvQUGleyRa6D4CCmnMd0ah5XSquWtbPuRxgx2wK5RZB+QRfKJoxQ==
   dependencies:
     "@turf/turf" "^5.1.6"
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
-"@ansyn/map-facade@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.3.40.tgz#db01ac638486f31fa67b5fd9ebf6f7e974daf9d6"
-  integrity sha512-0cvti34lj133Kh40XTzvKD1Gb7jVEadymtNt73tLUkjuQ9RYBokldhvxaMVQmNQApavus5heUMvxiRKXqXAGTw==
+"@ansyn/map-facade@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.6.0.tgz#e1dc56fc0c3ff8935b2db52c47fedaea44a87b0d"
+  integrity sha512-1T7Dgd+JU4CL1r/O0b9xJ84gQyAuoU/piOWjFZucuiggjPZ/M7uhutTHdBfdlNERKy+QNj6axXwPNeDPu8nanA==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
@@ -301,18 +302,18 @@
     lodash "^4.17.11"
     tslib "^1.9.0"
 
-"@ansyn/menu@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.3.40.tgz#0e7ea79a640d0717e48903d97a54eede68b3b7fc"
-  integrity sha512-p6ls5o+eeCOpEKmPqhzQDawI41ejtmfgpC5DKezCO+1Uj7BUMN09yh8eiHjsT+zNCzFO6Jx9wVO2LhPBGRPOog==
+"@ansyn/menu@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.6.0.tgz#eace78e80bb2af05e636911e8feb91fad929bbde"
+  integrity sha512-7KbbHy0nuoDXhNAnuFLNiunHErU1c4RC15/PJTKbCNjUYJ3lNRJ/DrDhcP3mCuMWDb7s/92UexkQ7yrD7RPBew==
   dependencies:
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
-"@ansyn/ol@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.3.40.tgz#3caabe917ba79ef2ed63d63c04fb9bccdffe7dc2"
-  integrity sha512-la5ge9vfBkk4lOuxUb0oyCvVvvT6JIuONRBN68MsO6SzSu9VVIpk4DK+PcHgODPwSzyrqlePA7lqHtRY2CU+7w==
+"@ansyn/ol@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.6.0.tgz#7b031f2789d71e6be37b694a9e5f10e980a46b2c"
+  integrity sha512-v1RgAddDpyuRq2zzaqNdHtTEYfTcMOody5LuTX3XlG8p2fQQZ1XgqveZEhiH+ySghY6JG0KnBTMMQeWCQ8Cq2A==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
