@@ -9,7 +9,7 @@
 		 "autoSave": false,
 		 "state": {
 		   "timeFilter": "Start - End",
-		   "orientation": "Align North",
+		   "orientation": "User Perspective",
 		   "maps": {
 			 "layout": "layout1",
 			 "data": [
@@ -78,13 +78,13 @@
 		   },
 		   "layers": {
 			 "activeLayersIds": [
-			   "08ca40aa-196c-80a3-d868-0264474319f6"
 			 ]
 		   },
 		   "favoriteOverlays": [],
 		   "removedOverlaysIds": [],
 		   "removedOverlaysVisibility": true,
 		   "presetOverlays": [],
+		   "overlaysTranslationData": {},
 		   "region": {
 			 "type": "Point",
 			 "coordinates": [
@@ -237,6 +237,11 @@
         "type": "Enum"
       },
       {
+      	"modelName": "containedInSearchPolygon",
+        "displayName": "Contains Region",
+        "type": "Enum"
+      },
+      {
         "modelName": "bestResolution",
         "displayName": "Resolution",
         "type": "Slider"
@@ -301,7 +306,9 @@
   },
   "loggerConfig": {
     "env": "PROD",
-    "active": false
+    "active": false,
+    "componentName": "app_client",
+    "disconnectionTimeoutInMinutes": 15
   },
   "statusBarConfig": {
     "toolTips": {
@@ -332,11 +339,15 @@
 		 	"alg_2": "name 2",
 		 	"geoRegistered": "Geo Registered",
 		 	"notGeoRegistered": "Not Geo Registered",
-			"poorGeoRegistered": "Poor Geo Registered"
+			"poorGeoRegistered": "Poor Geo Registered",
+			"AUTOSAVEON": "ON",
+			"AUTOSAVEOFF": "OFF",
+			"CaseName": "Name",
+			"TasksName": "Name"
 	   	}
     },
 	 "httpTimeout": "3000",
-	 "isFooterCollapsible": false,
+	 "isFooterCollapsible": true,
 	 "enable3D": true
   },
   "olConfig": {
@@ -363,13 +374,18 @@
     	"title": "Fork me on github",
 		"href": "https://github.com/ansyn/ansyn"
     },
-    "isCollapsible": false
+    "isCollapsible": true
   },
   "loginConfig": {
   	"baseUrl": "http://platform.ansyn.io:9001/api/v1/login",
   	"title": "AnSyn",
   	"active":  false,
   	"authorizedPath": "/"
+  },
+  "credentialsConfig": {
+  	"baseUrl": "assets/config/credentials.json",
+  	"active":  false,
+  	"noCredentialsMessage": "invalid credentials"
   },
   "visualizersConfig": {
     "FrameVisualizer": {
@@ -381,9 +397,9 @@
     "FootprintPolylineVisualizer": {
       "minSimplifyVertexCountLimit": 100,
       "colors": {
-        "active": "#27b2cf",
-        "inactive": "#d393e1",
-        "display": "#9524ad",
+        "active": "#fb634e",
+        "inactive": "#0091ff",
+        "display": "#8cceff",
         "favorite": "yellow"
       }
     },
@@ -428,6 +444,7 @@
     }
   },
   "multipleOverlaysSourceConfig": {
+  "useAngleDebugMode":  false,
 	 "defaultProvider": {
 	 	"inActive": false,
 		"whitelist": [
@@ -1221,5 +1238,9 @@
 			"regionLengthInMeters": 100
 		}
 	}
+  },
+  "anaglyphConfig": {
+  	"getStereoUrl": "needed test",
+  	"sensorNames": null
   }
 }
