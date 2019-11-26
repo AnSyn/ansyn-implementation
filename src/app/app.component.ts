@@ -22,7 +22,6 @@ export class AppComponent {
   mouseShadowOutputSubscription: Subscription;
   menuCollapsed = false;
   footerCollapsed = false;
-  hideMeasure = false;
 
   overlays = [
     this.overlay('000', 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Reeipublic_Banana.gif',
@@ -160,11 +159,6 @@ export class AppComponent {
   collapseMenu() {
     this.menuCollapsed = !this.menuCollapsed;
     this.ansynApi.collapseMenu(this.menuCollapsed);
-  }
-
-  hideMeasureControl() {
-    this.hideMeasure = !this.hideMeasure;
-    this.ansynApi.hideMeasurePanel(this.hideMeasure);
   }
 
   collapseAll() {
