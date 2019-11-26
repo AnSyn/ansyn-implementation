@@ -326,4 +326,9 @@ export class AppComponent {
     this.needToShowLayer = !this.needToShowLayer;
     this.ansynApi.showLayer(this.layerId, this.needToShowLayer);
   }
+
+  showHideDefaultLayer() {
+    this.needToShowLayer = !this.needToShowLayer;
+    this.ansynApi.showLayer(this.ansynApi.defaultLayerId, this.needToShowLayer);
+  }
 }
