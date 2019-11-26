@@ -162,8 +162,11 @@ export class AppComponent {
   }
 
   collapseAll() {
-    this.collapseMenu();
-    this.collapseFooter();
+    this.ansynApi.setMinimalistViewMode(true);
+  }
+
+  unCollapseAll() {
+    this.ansynApi.setMinimalistViewMode(false);
   }
 
   addCustomLayer(isEditable: boolean = true) {
