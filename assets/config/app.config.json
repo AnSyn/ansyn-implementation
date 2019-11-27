@@ -185,6 +185,9 @@
   	}
   },
   "mapSourceProvidersConfig": {
+  "AIRBUS": {
+    		"baseUrl": "http://localhost:8100"
+     },
     "SENTINEL":{
     	"baseUrl": "http://ansyn.webiks.com:89/api"
     },
@@ -347,7 +350,7 @@
 	   	}
     },
 	 "httpTimeout": "3000",
-	 "isFooterCollapsible": true,
+	 "isFooterCollapsible": false,
 	 "enable3D": true
   },
   "olConfig": {
@@ -374,7 +377,7 @@
     	"title": "Fork me on github",
 		"href": "https://github.com/ansyn/ansyn"
     },
-    "isCollapsible": true
+    "isCollapsible": false
   },
   "loginConfig": {
   	"baseUrl": "http://platform.ansyn.io:9001/api/v1/login",
@@ -388,6 +391,11 @@
   	"noCredentialsMessage": "invalid credentials"
   },
   "visualizersConfig": {
+  	"MeasureDistanceVisualizer": {
+  		"extra": {
+  			"isTotalMeasureActive": true
+  		}
+    },
     "FrameVisualizer": {
       "colors": {
         "active": "#27b2cf",
@@ -396,6 +404,14 @@
     },
     "FootprintPolylineVisualizer": {
       "minSimplifyVertexCountLimit": 100,
+      "colors": {
+        "active": "#fb634e",
+        "inactive": "#0091ff",
+        "display": "#8cceff",
+        "favorite": "yellow"
+      }
+    },
+    "OverlayHoverVisualizer": {
       "colors": {
         "active": "#fb634e",
         "inactive": "#0091ff",
@@ -532,7 +548,7 @@
 		  "blacklist": []
 		},
 		"PLANET": {
-		  "inActive": false,
+		  "inActive": true,
 		  "whitelist": [
 			  {
 				"name": "Entire Earth",
@@ -1182,9 +1198,140 @@
 					  }
 					]
 			  }
-		}
-	}
-  },
+		},
+		"AIRBUS": {
+			"inActive": true,
+			"whitelist": [
+				{
+					"name": "Entire Earth",
+					"dates": [
+						{
+							"start": null,
+							"end": null
+						}
+					],
+					"sensorNames": [ null ],
+					"coverage": [
+						[
+							[
+								[
+									-180,
+									-90
+								],
+								[
+									-180,
+									90
+								],
+								[
+									180,
+									90
+								],
+								[
+									180,
+									-90
+								],
+								[
+									-180,
+									-90
+								]
+							]
+						]
+					]
+				}
+			],
+			"blacklist": [],
+			"dataInputFiltersConfig": {
+				"text": "Airbus",
+				"value": 1,
+					"indeterminate": true,
+					"collapsed": true,
+					"children": [
+						  {
+							"text": "PHR1A",
+							"value": {
+							  "sensorType": "PHR1A"
+							}
+						  },
+						  {
+							"text": "PHR1B",
+							"value": {
+							  "sensorType": "PHR1B"
+							}
+						  },
+						  {
+							"text": "SPOT6",
+							"value": {
+							  "sensorType": "SPOT6"
+							}
+						  },
+						  {
+							"text": "SPOT7",
+							"value": {
+							  "sensorType": "SPOT7"
+							}
+						  }
+					]
+			  }
+		},
+			"IMAGERY_VIDEO": {
+        		"inActive": true,
+        		"whitelist": [
+        			{
+        				"name": "Entire Earth",
+        				"dates": [
+        					{
+        						"start": null,
+        						"end": null
+        					}
+        				],
+        				"sensorNames": [ null ],
+        				"coverage": [
+        					[
+        						[
+        							[
+        								-180,
+        								-90
+        							],
+        							[
+        								-180,
+        								90
+        							],
+        							[
+        								180,
+        								90
+        							],
+        							[
+        								180,
+        								-90
+        							],
+        							[
+        								-180,
+        								-90
+        							]
+        						]
+        					]
+        				]
+        			}
+        		],
+        		"blacklist": [],
+        		"dataInputFiltersConfig": {
+        			"text": "Video",
+        			"value": 1,
+        				"indeterminate": true,
+        				"collapsed": true,
+        				"children": [
+        					  {
+        						"text": "Video",
+        						"value": {
+        						  "sensorType": "Video"
+        						}
+        					  }
+        				]
+        		  }
+              }
+          }
+	},
+
   "idahoOverlaysSourceConfig": {
     "defaultApi": "overlays",
     "baseUrl": "http://platform.ansyn.io:9001/api/v1/",
