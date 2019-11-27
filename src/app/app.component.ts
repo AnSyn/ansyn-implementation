@@ -295,6 +295,7 @@ export class AppComponent {
               'stroke-width': 7,
               'fill-opacity': 0,
               'stroke-opacity': 1,
+              'stroke-dasharray': isEditable ? 0 : 1,
               'marker-size': 'medium',
               'marker-color': '#af0505',
               'label': {
