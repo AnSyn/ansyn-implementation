@@ -52,7 +52,12 @@ const mergeChanges = {
     }
   },
   multipleOverlaysSourceConfig: {
-    useAngleDebugMode: true
+    useAngleDebugMode: true,
+    indexProviders: {
+      'SENTINEL': {
+        'inActive': true
+      }
+    }
   }
 };
 
