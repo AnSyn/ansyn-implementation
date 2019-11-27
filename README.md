@@ -11,7 +11,7 @@ yarn add @ansyn/ansyn @ansyn/assets @ansyn/core @ngrx/core @ngrx/store @ngrx/eff
 ```
 (or, to update existing packages:)
 ```shell
-yarn upgrade @ansyn/ansyn @ansyn/assets
+yarn upgrade @ansyn/ansyn @ansyn/imagery @ansyn/imagery-cesium @ansyn/ol @ansyn/map-facade @ansyn/menu 
 ```
 
 ## Usage

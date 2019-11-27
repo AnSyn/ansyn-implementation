@@ -22,7 +22,6 @@ export class AppComponent {
   mouseShadowOutputSubscription: Subscription;
   menuCollapsed = false;
   footerCollapsed = false;
-  hideMeasure = false;
 
   overlays = [
     this.overlay('000', 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Reeipublic_Banana.gif',
@@ -162,338 +161,162 @@ export class AppComponent {
     this.ansynApi.collapseMenu(this.menuCollapsed);
   }
 
-  hideMeasureControl() {
-    this.hideMeasure = !this.hideMeasure;
-    this.ansynApi.hideMeasurePanel(this.hideMeasure);
-  }
-
   collapseAll() {
-    this.collapseMenu();
-    this.collapseFooter();
+    this.ansynApi.setMinimalistViewMode(true);
   }
 
-  addCustomLayer() {
-    const tempLayer: FeatureCollection = {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Polygon',
-            coordinates: [
-              [
-                [
-                  34.42180056333462,
-                  31.522542081228224
-                ],
-                [
-                  34.428280718706475,
-                  31.522570338338216
-                ],
-                [
-                  34.428303923220646,
-                  31.51724888624478
-                ],
-                [
-                  34.42182376784878,
-                  31.517220629134776
-                ],
-                [
-                  34.42180056333462,
-                  31.522542081228224
-                ]
-              ]
-            ]
-          },
-          properties: {
-            id: '896fd040-2c63-d98d-66f9-36c0e612edd4',
-            style: {
-              opacity: 1,
-              initial: {
-                fill: '#e01818',
-                stroke: '#27b2cf',
-                'stroke-width': 1,
-                'fill-opacity': 0.4,
-                'stroke-opacity': 0,
-                'marker-size': 'medium',
-                'marker-color': '#ffffff',
-                label: {
-                  overflow: true,
-                  font: '27px Calibri,sans-serif',
-                  stroke: '#000',
-                  fill: 'white'
-                }
-              }
-            },
-            showMeasures: true,
-            label: '',
-            icon: '',
-            undeletable: false,
-            mode: 'Rectangle'
-          }
-        },
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Polygon',
-            coordinates: [
-              [
-                [
-                  34.4365097521911,
-                  31.529277606314242
-                ],
-                [
-                  34.43640632078638,
-                  31.53032776298979
-                ],
-                [
-                  34.4361000013831,
-                  31.531337562733228
-                ],
-                [
-                  34.43560256566414,
-                  31.53226819950672
-                ],
-                [
-                  34.43493312980522,
-                  31.53308390946097
-                ],
-                [
-                  34.43411741985097,
-                  31.533753345319894
-                ],
-                [
-                  34.433186783077474,
-                  31.53425078103885
-                ],
-                [
-                  34.43217698333404,
-                  31.53455710044213
-                ],
-                [
-                  34.43112682665849,
-                  31.53466053184685
-                ],
-                [
-                  34.430076669982945,
-                  31.53455710044213
-                ],
-                [
-                  34.42906687023951,
-                  31.53425078103885
-                ],
-                [
-                  34.42813623346601,
-                  31.533753345319894
-                ],
-                [
-                  34.42732052351176,
-                  31.53308390946097
-                ],
-                [
-                  34.42665108765284,
-                  31.53226819950672
-                ],
-                [
-                  34.42615365193388,
-                  31.531337562733228
-                ],
-                [
-                  34.4258473325306,
-                  31.53032776298979
-                ],
-                [
-                  34.425743901125884,
-                  31.529277606314242
-                ],
-                [
-                  34.4258473325306,
-                  31.528227449638695
-                ],
-                [
-                  34.42615365193388,
-                  31.527217649895256
-                ],
-                [
-                  34.42665108765284,
-                  31.526287013121763
-                ],
-                [
-                  34.42732052351176,
-                  31.525471303167514
-                ],
-                [
-                  34.42813623346601,
-                  31.52480186730859
-                ],
-                [
-                  34.42906687023951,
-                  31.524304431589634
-                ],
-                [
-                  34.430076669982945,
-                  31.523998112186355
-                ],
-                [
-                  34.43112682665849,
-                  31.523894680781634
-                ],
-                [
-                  34.43217698333404,
-                  31.523998112186355
-                ],
-                [
-                  34.433186783977474,
-                  31.524304431589634
-                ],
-                [
-                  34.433186783077474,
-                  31.524304431589634
-                ],
-                [
-                  34.43411741985097,
-                  31.52480186730859
-                ],
-                [
-                  34.43493312980522,
-                  31.525471303167514
-                ],
-                [
-                  34.43560256566414,
-                  31.526287013121763
-                ],
-                [
-                  34.4361000013831,
-                  31.527217649895256
-                ],
-                [
-                  34.43640632078638,
-                  31.528227449638695
-                ],
-                [
-                  34.4365097521911,
-                  31.529277606314242
-                ]
-              ]
-            ]
-          },
-          properties: {
-            id: '6ebb5652-e21e-59b6-e067-3dd025e5ad15',
-            style: {
-              opacity: 1,
-              initial: {
-                fill: '#ffffff',
-                stroke: '#272fcf',
-                'stroke-width': 7,
-                'fill-opacity': 0,
-                'stroke-opacity': 1,
-                'marker-size': 'medium',
-                'marker-color': '#ffffff',
-                label: {
-                  overflow: true,
-                  font: '27px Calibri,sans-serif',
-                  stroke: '#000',
-                  fill: 'white'
-                }
-              }
-            },
-            showMeasures: false,
-            label: 'בדיקה',
-            icon: '',
-            undeletable: false,
-            mode: 'Circle'
-          }
-        },
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [
-              34.43481913393523,
-              31.5219079757809926
-            ]
-          },
-          properties: {
-            id: '7537abd0-8040-8887-e925-0f958f5c7e30',
-            style: {
-              opacity: 1,
-              initial: {
-                fill: '#d61414',
-                stroke: '#07bde4',
-                'stroke-width': 5,
-                'fill-opacity': 0.4,
-                'stroke-opacity': 1,
-                'marker-size': 'medium',
-                'marker-color': '#ffffff',
-                label: {
-                  overflow: true,
-                  font: '27px Calibri,sans-serif',
-                  stroke: '#000',
-                  fill: 'white'
-                }
-              }
-            },
-            showMeasures: true,
-            label: '1',
-            icon: '',
-            undeletable: false,
-            mode: 'Point'
-          }
-        },
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'LineString',
-            coordinates: [
-              [
-                34.41783180455111,
-                31.527245507961897
-              ],
-              [
-                34.418624422348394,
-                31.512786355713917
-              ],
-              [
-                34.44149097230216,
-                31.51451686527523
-              ],
-              [
-                34.44489428733085,
-                31.531225933259076
-              ]
-            ]
-          },
-          properties: {
-            id: 'c1d67534-641e-5d19-68f0-fceaea457d44',
-            style: {
-              opacity: 1,
-              initial: {
-                fill: '#ffffff',
-                stroke: '#27c72c',
-                'stroke-width': 5,
-                'fill-opacity': 0.4,
-                'stroke-opacity': 1,
-                'marker-size': 'medium',
-                'marker-color': '#ffffff',
-                label: {
-                  overflow: true,
-                  font: '27px Calibri,sana-serif',
-                  stroke: '#000',
-                  fill: 'white'
-                }
-              }
-            },
-            showMeasures: true,
-            label: 'שששש',
-            icon: '',
-            undeletable: false,
-            mode: 'LineString'
-          }
-        }
-      ]
-    };
-    this.layerId = this.ansynApi.insertLayer('test', tempLayer);
+  unCollapseAll() {
+    this.ansynApi.setMinimalistViewMode(false);
   }
+
+  addCustomLayer(isEditable: boolean = true) {
+    const layer: FeatureCollection = {
+      'type': 'FeatureCollection',
+      'features': [{
+        'type': 'Feature',
+        'geometry': { 'type': 'Point', 'coordinates': [-122.3865658852983, 37.62603244149734] },
+        'properties': {
+          'id': 'dcfa10f2-7b49-3151-5126-954c1a3305e0',
+          'style': {
+            'opacity': 1,
+            'initial': {
+              'fill': '#ffffff',
+              'stroke': '#27b2cf',
+              'stroke-width': 1,
+              'fill-opacity': 0.4,
+              'stroke-opacity': 1,
+              'marker-size': 'medium',
+              'marker-color': '#ffffff',
+              'label': {
+                'overflow': true,
+                'font': '27px Calibri,sans-serif',
+                'stroke': '#000',
+                'fill': 'white'
+              }
+            }
+          },
+          'showMeasures': false,
+          'label': '',
+          'icon': '',
+          'undeletable': false,
+          'mode': 'Point'
+        }
+      }, {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'LineString',
+          'coordinates': [[-122.38998010946246, 37.62742342165281], [-122.39137109122585, 37.62379844287092],
+            [-122.39006441323906, 37.62198595347998],
+            [-122.3879568670617, 37.62232316054677]]
+        },
+        'properties': {
+          'id': 'c9bd6965-8b3c-143c-4ce3-381753621935',
+          'style': {
+            'opacity': 1,
+            'initial': {
+              'fill': '#ffffff',
+              'stroke': '#27b2cf',
+              'stroke-width': 1,
+              'fill-opacity': 0.4,
+              'stroke-opacity': 1,
+              'marker-size': 'medium',
+              'marker-color': '#ffffff',
+              'label': {
+                'overflow': true,
+                'font': '27px Calibri,sans-serif',
+                'stroke': '#000',
+                'fill': 'white'
+              }
+            }
+          },
+          'showMeasures': false,
+          'label': '',
+          'icon': '',
+          'undeletable': false,
+          'mode': 'LineString'
+        }
+      }, {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'Polygon',
+          'coordinates': [[[-122.37396275851451, 37.6248522159596], [-122.37122294848395, 37.619962707863365],
+            [-122.37792494597112, 37.62042636898715], [-122.37944237857565, 37.62392489531998], [-122.37396275851451, 37.6248522159596]]]
+        },
+        'properties': {
+          'id': '64c65741-d1e4-7faa-2a5e-65f4e00a7fc7',
+          'style': {
+            'opacity': 1,
+            'initial': {
+              'fill': '#af0505',
+              'stroke': '#27b2cf',
+              'stroke-width': 7,
+              'fill-opacity': 0.4,
+              'stroke-opacity': 0,
+              'marker-size': 'medium',
+              'marker-color': '#af0505',
+              'label': {
+                'overflow': true,
+                'font': '27px Calibri,sans-serif',
+                'stroke': '#000',
+                'fill': 'white'
+              }
+            }
+          },
+          'showMeasures': false,
+          'label': '',
+          'icon': '',
+          'undeletable': false,
+          'mode': 'Polygon'
+        }
+      }, {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'Polygon',
+          'coordinates': [[[-122.38508709430224, 37.621606594524884], [-122.38516977341148, 37.622446049608556],
+            [-122.38541463342742, 37.62325324490413], [-122.38581226451696, 37.623997160349084], [-122.38634738594031, 37.624649207690055],
+            [-122.38699943328128, 37.62518432911341], [-122.38774334872623, 37.62558196020294], [-122.38855054402181, 37.625826820218876],
+            [-122.38938999910548, 37.625909499328124], [-122.39022945418914, 37.625826820218876], [-122.39103664948472, 37.62558196020294],
+            [-122.39178056492968, 37.62518432911341], [-122.39243261227064, 37.624649207690055], [-122.392967733694, 37.623997160349084],
+            [-122.39336536478353, 37.62325324490413], [-122.39361022479947, 37.622446049608556], [-122.39369290390871, 37.621606594524884],
+            [-122.39361022479947, 37.62076713944121], [-122.39336536478353, 37.61995994414564], [-122.392967733694, 37.619216028700684],
+            [-122.39243261227064, 37.61856398135971], [-122.39178056492968, 37.61802885993636], [-122.39103664948472, 37.617631228846825],
+            [-122.39022945418914, 37.61738636883089], [-122.38938999910548, 37.617303689721645], [-122.38855054402181, 37.61738636883089],
+            [-122.38774334872623, 37.617631228846825], [-122.38699943328128, 37.61802885993636], [-122.38634738594031, 37.61856398135971],
+            [-122.38581226451696, 37.619216028700684], [-122.38541463342742, 37.61995994414564], [-122.38516977341148, 37.62076713944121],
+            [-122.38508709430224, 37.621606594524884]]]
+        },
+        'properties': {
+          'id': 'bf8fa21d-d98e-40a1-7c33-669016a18c88',
+          'style': {
+            'opacity': 1,
+            'initial': {
+              'fill': '#af0505',
+              'stroke': '#0498b6',
+              'stroke-width': 7,
+              'fill-opacity': 0,
+              'stroke-opacity': 1,
+              'stroke-dasharray': isEditable ? 0 : 1,
+              'marker-size': 'medium',
+              'marker-color': '#af0505',
+              'label': {
+                'overflow': true,
+                'font': '27px Calibri,sans-serif',
+                'stroke': '#000',
+                'fill': 'white'
+              }
+            }
+          },
+          'showMeasures': false,
+          'label': 'test',
+          'icon': '',
+          'undeletable': false,
+          'mode': 'Circle'
+        }
+      }]
+    };
+    this.layerId = this.ansynApi.insertLayer(`test${!isEditable ? '_nonedit' : ''}`, layer, isEditable);
+  }
+
 
   removeLayer() {
     this.ansynApi.removeLayer(this.layerId);
@@ -503,5 +326,10 @@ export class AppComponent {
   showLayer() {
     this.needToShowLayer = !this.needToShowLayer;
     this.ansynApi.showLayer(this.layerId, this.needToShowLayer);
+  }
+
+  showHideDefaultLayer() {
+    this.needToShowLayer = !this.needToShowLayer;
+    this.ansynApi.showLayer(this.ansynApi.defaultLayerId, this.needToShowLayer);
   }
 }

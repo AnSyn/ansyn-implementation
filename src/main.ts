@@ -1,8 +1,8 @@
-import {enableProdMode} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AppModule} from './app/app.module';
-import {environment} from './environments/environment';
-import {fetchConfigProviders} from '@ansyn/ansyn';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+import { fetchConfigProviders } from '@ansyn/ansyn';
 
 if (environment.production) {
   enableProdMode();
@@ -47,9 +47,20 @@ const mergeChanges = {
     'isCollapsible': true
   },
   'mapFacadeConfig': {
-  'mapSearch': {
-    'active': false
-  }
+    'mapSearch': {
+      'active': false
+    }
+  },
+  multipleOverlaysSourceConfig: {
+    useAngleDebugMode: true,
+    indexProviders: {
+      'SENTINEL': {
+        'inActive': true
+      }
+    }
+  },
+  credentialsConfig: {
+    'active': true
   }
 };
 

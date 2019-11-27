@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start_4201": "ng serve --port 4201",
     "build": "ng build",
     "build:prod": "node --max_old_space_size=12288 ./node_modules/@angular/cli/bin/ng build --prod",
     "test": "ng test",

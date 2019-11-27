@@ -221,9 +221,9 @@
     tslib "^1.9.0"
 
 "@ansyn/ansyn@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.6.0.tgz#af0356de3892b052bd5806bdfda67331d7af7557"
-  integrity sha512-5LQ5OhlFabTT6cVy31tzHZYCjhsvYG1otjca3bdzduv4vtPg6tX1i6NBFu2BDQvnBfxanIvFp4jhuIbMzVGX7A==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/ansyn/-/ansyn-0.6.1.tgz#3a4bfe6eec3bdf53969a2065f5495888d2fb4674"
+  integrity sha512-OSM7KUKAy5dHYq086Q7KMtHax+QaQC+zk4l1gqvrKkDwB7jMSKOUHTNwgdSZ+DmuZRYxH5OK5Vb5yqPXfyUCvA==
   dependencies:
     "@turf/turf" "^5.1.6"
     auto-subscriptions "^2.0.5"
@@ -231,7 +231,7 @@
     flatpickr "^4.5.7"
     font-awesome "^4.7.0"
     geojson "^0.5.0"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     lodash-decorators "^4.5.0"
     moment "^2.21.0"
     ngx-bootstrap "^2.0.4"
@@ -249,9 +249,9 @@
   integrity sha512-bQIu0SslBrkmGmoHw+Wers4r67PvLPRaLnroLm9RpLYdhygoajvt8Pa8KcRWG61fOZu/XeNW+EJrLsjhHRDVkw==
 
 "@ansyn/imagery-cesium@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.6.0.tgz#8b4d2b28d56e948a92eeb77f1f9478c0fe9268da"
-  integrity sha512-l5fx+iB7Jto3xOgxduGbCEc7uFmRz7LJwvzqn3FjJt022O8yvn4H02yjUW5l/gkuGE9dh/Phk/41e4VxeKeRSA==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery-cesium/-/imagery-cesium-0.6.1.tgz#2410b571953baa2391b1f38e1e7cb07ff19d729e"
+  integrity sha512-G4XBsS0311PSaRtCjaN31HuuNlbyU0umMR5BfxjZAJhJp5lM6G8Sh1ARy/BQKfi/MJXzETs8UvLoFmi7M4uKTw==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
@@ -261,38 +261,38 @@
     tslib "^1.9.0"
 
 "@ansyn/imagery@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.6.0.tgz#7cd263caa0eb9c34419f9a4802f9ee837fffaa79"
-  integrity sha512-NU2af8vGmIl5kwvmQWc8ZyEUUuC4kubiwwWvQUGleyRa6D4CCmnMd0ah5XSquWtbPuRxgx2wK5RZB+QRfKJoxQ==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/imagery/-/imagery-0.6.1.tgz#f791143288c48815a2054fbc85f84e3efb294e85"
+  integrity sha512-OII7hRw84k/AP7UfnZSSqA/BoM/bHzR4o3m6ALTsUwBvJObq4apqCGneBoZO1EJiRnvpyryhSuE+gRhOCNWZgA==
   dependencies:
     "@turf/turf" "^5.1.6"
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
 "@ansyn/map-facade@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.6.0.tgz#e1dc56fc0c3ff8935b2db52c47fedaea44a87b0d"
-  integrity sha512-1T7Dgd+JU4CL1r/O0b9xJ84gQyAuoU/piOWjFZucuiggjPZ/M7uhutTHdBfdlNERKy+QNj6axXwPNeDPu8nanA==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/map-facade/-/map-facade-0.6.1.tgz#5655e08f6379172f3178cabac79619028383643b"
+  integrity sha512-LOeUXAaGsroj9n5ClE2k6RkKLuB/qs5j7Q17zOptYf4yDWQwgUMxwg4JMx5Qy9EJ0IHbTlGXvGlfu++UVWEcAQ==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
     auto-subscriptions "^2.0.5"
     file-saver "^1.3.8"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     tslib "^1.9.0"
 
 "@ansyn/menu@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.6.0.tgz#eace78e80bb2af05e636911e8feb91fad929bbde"
-  integrity sha512-7KbbHy0nuoDXhNAnuFLNiunHErU1c4RC15/PJTKbCNjUYJ3lNRJ/DrDhcP3mCuMWDb7s/92UexkQ7yrD7RPBew==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/menu/-/menu-0.6.1.tgz#f3bc3feafe932c7d99a5788abc38936529e3692a"
+  integrity sha512-hAwiEBB73V6pHJ5lznyHTq4pH9JpYHw27aaxiaDpuvY+87Q0kT9IBo0stNNOkGwfnrzsx+7dMumcm2XCCqEn5w==
   dependencies:
     auto-subscriptions "^2.0.5"
     tslib "^1.9.0"
 
 "@ansyn/ol@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.6.0.tgz#7b031f2789d71e6be37b694a9e5f10e980a46b2c"
-  integrity sha512-v1RgAddDpyuRq2zzaqNdHtTEYfTcMOody5LuTX3XlG8p2fQQZ1XgqveZEhiH+ySghY6JG0KnBTMMQeWCQ8Cq2A==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@ansyn/ol/-/ol-0.6.1.tgz#1ddcf647b572ec11b1ca3565027e546d1803388d"
+  integrity sha512-T8sAavuuBko24LOkhgTREfMROhenAjmwLLvjBeeOcFjtsR8fSQJlZsgO+VSMzP2xThlNshtEs6fLPtDQgo3kbw==
   dependencies:
     "@turf/turf" "^5.1.6"
     angular2-uuid "^1.1.1"
@@ -3603,7 +3603,19 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-deep-equal@^1.0.0, deep-equal@^1.0.1:
+deep-equal@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
+  integrity sha512-yd9c5AdiqVcR+JjcwUQb9DkhJc8ngNr0MahEBGvDiJw8puWab2yZlh+nkasOnZP+EGTAP6rRp2JzJhJZzvNF8g==
+  dependencies:
+    is-arguments "^1.0.4"
+    is-date-object "^1.0.1"
+    is-regex "^1.0.4"
+    object-is "^1.0.1"
+    object-keys "^1.1.1"
+    regexp.prototype.flags "^1.2.0"
+
+deep-equal@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.0.tgz#3103cdf8ab6d32cf4a8df7865458f2b8d33f3745"
   integrity sha512-ZbfWJq/wN1Z273o7mUSjILYqehAktR2NVoSrOukDkU9kg2v/Uv89yU4Cvz8seJeAmtN5oqiefKq8FPuXOboqLw==
@@ -5918,7 +5930,7 @@ lodash.tail@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.tail/-/lodash.tail-4.1.1.tgz#d2333a36d9e7717c8ad2f7cacafec7c32b444664"
   integrity sha1-0jM6NtnncXyK0vfKyv7HwytERmQ=
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
+lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -7262,9 +7274,9 @@ process@^0.11.10:
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
 proj4@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/proj4/-/proj4-2.5.0.tgz#e3a88ce7e7a07221aaccbc6760dd2eafee745f03"
-  integrity sha512-XZTRT7OPdLzgvtTqL8DG2cEj8lYdovztOwiwpwRSYayOty5Ipf3H68dh/fiL+HKDEyetmQSMhkkMGiJoyziz3w==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/proj4/-/proj4-2.6.0.tgz#154c0e8eeb1aaae9914ec387753396cbc003ae72"
+  integrity sha512-ll2WyehUFOyzEZtN8hAiOTmZpuDCN5V+4A/HjhPbhlwVwlsFKnIHSZ3l3uhzgDndHjoL2MyERFGe9VmXN4rYUg==
   dependencies:
     mgrs "1.0.0"
     wkt-parser "^1.2.0"
