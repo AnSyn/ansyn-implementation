@@ -58,6 +58,9 @@ const mergeChanges = {
         'inActive': true
       }
     }
+  },
+  credentialsConfig: {
+    'active': true
   }
 };
 
