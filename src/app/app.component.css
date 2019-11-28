@@ -15,6 +15,11 @@ h1 {
   height: 12%;
 }
 
+input[type='number'] {
+  width: 30px;
+  text-align: right;
+}
+
 ansyn-app {
   display: block;
   height: 88%;

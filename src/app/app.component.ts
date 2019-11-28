@@ -1,13 +1,13 @@
-import {HttpClient} from '@angular/common/http';
-import {Component} from '@angular/core';
-import {AnsynApi, GeoRegisteration, IOverlay, RegionContainment} from '@ansyn/ansyn';
-import {FeatureCollection} from 'geojson';
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AnsynApi, GeoRegisteration, IOverlay, IOverlaysCriteria, RegionContainment } from '@ansyn/ansyn';
+import { Feature, FeatureCollection, Point, Polygon } from 'geojson';
 import * as momentNs from 'moment';
-import {Observable, Subscription} from 'rxjs';
-import {take, tap} from 'rxjs/operators';
-import {LayoutKey, layoutOptions} from '@ansyn/map-facade';
+import { Observable, Subscription } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
+import { LayoutKey, layoutOptions } from '@ansyn/map-facade';
 import * as packageJson from 'root/package.json';
-
+import { getPolygonByPointAndRadius } from '@ansyn/imagery';
 
 const moment = momentNs;
 
@@ -36,6 +36,12 @@ export class AppComponent {
   version: string = (<any>packageJson).dependencies['@ansyn/ansyn'].replace(/[/^/~]/g, '');
   layerId: string;
   needToShowLayer = true;
+
+  SEARCH_POINT = [-79.120, 37.385];
+  radiusForPoint = 100;
+  radiusForPolygon = 0;
+  @ViewChild('searchByPointBtn') searchByPointBtn: ElementRef;
+  @ViewChild('searchByPolygonBtn') searchByPolygonBtn: ElementRef;
 
   constructor(protected ansynApi: AnsynApi,
               private http: HttpClient) {
@@ -114,7 +120,47 @@ export class AppComponent {
   }
 
   setPositionWithRadius() {
-    this.ansynApi.setMapPositionByRadius({type: 'Point', coordinates: [-117.914, 33.8117]}, 100, true);
+    this.ansynApi.setMapPositionByRadius({ type: 'Point', coordinates: this.SEARCH_POINT }, 100, true);
+  }
+
+  setOverlayCriteriaPoint(radius: number = this.radiusForPoint) {
+    const point: Point = {
+      type: 'Point',
+      coordinates: this.SEARCH_POINT
+    };
+    this.ansynApi.setMapPositionByRadius(point, 2000, false);
+    const criteria: IOverlaysCriteria = {
+      region: point
+    };
+    this.ansynApi.setOverlaysCriteria(criteria, radius);
+  }
+
+  onPointRadiusEnter(event: KeyboardEvent) {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      this.searchByPointBtn.nativeElement.click();
+    }
+  }
+
+  setOverlayCriteriaPolygon(radius: number = this.radiusForPolygon) {
+    const point: Point = {
+      type: 'Point',
+      coordinates: this.SEARCH_POINT
+    };
+    this.ansynApi.setMapPositionByRadius(point, 2000, false);
+    const radiusInMeters = 100;
+    const polygon: Feature<Polygon> = getPolygonByPointAndRadius(point.coordinates, radiusInMeters / 1000);
+    const criteria: IOverlaysCriteria = {
+      region: polygon.geometry
+    };
+    this.ansynApi.setOverlaysCriteria(criteria, radius);
+  }
+
+  onPolygonRadiusEnter(event: KeyboardEvent) {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      this.searchByPolygonBtn.nativeElement.click();
+    }
   }
 
   setOverlays() {
@@ -148,7 +194,7 @@ export class AppComponent {
   }
 
   setMouseShadowPoint() {
-    this.ansynApi.setOutSourceMouseShadow({type: 'Point', coordinates: [-122.3857620823084, 37.62041171284878]});
+    this.ansynApi.setOutSourceMouseShadow({ type: 'Point', coordinates: [-122.3857620823084, 37.62041171284878] });
   }
 
   collapseFooter() {
@@ -314,7 +360,7 @@ export class AppComponent {
         }
       }]
     };
-    this.layerId = this.ansynApi.insertLayer(`test${!isEditable ? '_nonedit' : ''}`, layer, isEditable);
+    this.layerId = this.ansynApi.insertLayer(`test${ !isEditable ? '_nonedit' : '' }`, layer, isEditable);
   }
 
 

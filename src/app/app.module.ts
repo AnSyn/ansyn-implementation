@@ -6,18 +6,20 @@ import {CustomMenuComponent} from './menus/custom-menu/custom-menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomMenuComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
-    AnsynModule.component(),
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        StoreModule.forRoot({}),
+        EffectsModule.forRoot([]),
+        AnsynModule.component(),
+        FormsModule,
+    ],
   providers: [
     {
       provide: OL_CONFIG,

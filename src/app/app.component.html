@@ -8,6 +8,12 @@
   <button (click)="setFeatureCollection()">add features</button>
   <button (click)="deleteFeatureCollection()">remove features</button>
   <button (click)="setPositionWithRadius()">set position + radius + search</button>
+
+  <button #searchByPointBtn (click)="setOverlayCriteriaPoint()">Search by point with radius:</button>
+  <input type="number" [(ngModel)]="radiusForPoint" (keyup)="onPointRadiusEnter($event)">m
+  <button #searchByPolygonBtn (click)="setOverlayCriteriaPolygon()">Search by polygon with radius:</button>
+  <input type="number" [(ngModel)]="radiusForPolygon" (keyup)="onPolygonRadiusEnter($event)">m
+
   <button (click)="setOverlays()">set overlays</button>
   <button (click)="displayOverlay()">display overlay</button>
   <button (click)="displayTwoOverlays()">display two overlays</button>
