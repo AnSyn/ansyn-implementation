@@ -303,7 +303,7 @@
       }
     ],
     "ShadowMouse": {
-    	"activeByDefault": false,
+    	"activeByDefault": true,
     	"forceSendShadowMousePosition": false
     }
   },
