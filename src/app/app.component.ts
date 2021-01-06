@@ -18,7 +18,6 @@ const moment = momentNs;
 })
 export class AppComponent {
   layoutKeys: LayoutKey[] = Array.from(layoutOptions.keys());
-  featureOptions: FeatureCollection<any>;
   mouseShadowOutputSubscription: Subscription;
   menuCollapsed = false;
   footerCollapsed = false;
@@ -40,17 +39,13 @@ export class AppComponent {
   SEARCH_POINT = [-79.120, 37.385];
   radiusForPoint = 100;
   radiusForPolygon = 0;
-  @ViewChild('searchByPointBtn') searchByPointBtn: ElementRef;
-  @ViewChild('searchByPolygonBtn') searchByPolygonBtn: ElementRef;
+  @ViewChild('searchByPointBtn', {static: false}) searchByPointBtn: ElementRef;
+  @ViewChild('searchByPolygonBtn', {static: false}) searchByPolygonBtn: ElementRef;
 
   constructor(protected ansynApi: AnsynApi,
               private http: HttpClient) {
 
-    this.getFeatureCollectionFromFile().subscribe(response => {
-      this.featureOptions = response.featureCollection;
-    });
-
-    this.ansynApi.onReady.subscribe((ready) => {
+    this.ansynApi.events.onReady.subscribe((ready) => {
       console.log('ready: ' + ready);
     });
   }
@@ -104,7 +99,9 @@ export class AppComponent {
   }
 
   setFeatureCollection(): void {
-    this.ansynApi.setAnnotations(this.featureOptions);
+    this.getFeatureCollectionFromFile().subscribe(response => {
+      this.ansynApi.setAnnotations(response.featureCollection);
+    });
   }
 
   deleteFeatureCollection(): void {

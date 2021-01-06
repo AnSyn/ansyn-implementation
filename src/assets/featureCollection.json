@@ -52,7 +52,10 @@
             }
           },
           "showMeasures": false,
-          "label": "Ansyn",
+          "label": {
+            "text": "Ansyn",
+            "geometry": null
+          },
           "icon": "",
           "mode": "Rectangle"
         }
@@ -219,7 +222,10 @@
             }
           },
           "showMeasures": false,
-          "label": "",
+          "label": {
+            "text": "",
+            "geometry": null
+          },
           "icon": "",
           "mode": "Circle"
         }
@@ -282,7 +288,10 @@
             }
           },
           "showMeasures": false,
-          "label": "",
+          "label": {
+            "name": "",
+            "geometry": null
+          },
           "icon": "assets/logo.svg",
           "mode": "Arrow"
         }
@@ -349,7 +358,10 @@
             }
           },
           "showMeasures": false,
-          "label": "can't be delete",
+          "label": {
+            "text": "can't be delete",
+            "geometry": null
+          },
           "icon": "",
           "mode": "Polygon",
           "undeletable": true
