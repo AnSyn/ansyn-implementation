@@ -117,7 +117,7 @@ export class AppComponent {
   }
 
   setPositionWithRadius() {
-    this.ansynApi.setMapPositionByRadius({ type: 'Point', coordinates: this.SEARCH_POINT }, 100, true);
+    this.ansynApi.setMapPositionByRadius({ type: 'Point', coordinates: this.SEARCH_POINT }, 100, 1, true);
   }
 
   setOverlayCriteriaPoint(radius: number = this.radiusForPoint) {
@@ -125,7 +125,7 @@ export class AppComponent {
       type: 'Point',
       coordinates: this.SEARCH_POINT
     };
-    this.ansynApi.setMapPositionByRadius(point, 2000, false);
+    this.ansynApi.setMapPositionByRadius(point, 2000, 1, false);
     const criteria: IOverlaysCriteria = {
       region: point
     };
@@ -144,7 +144,7 @@ export class AppComponent {
       type: 'Point',
       coordinates: this.SEARCH_POINT
     };
-    this.ansynApi.setMapPositionByRadius(point, 2000, false);
+    this.ansynApi.setMapPositionByRadius(point, 2000, 1,  false);
     const radiusInMeters = 100;
     const polygon: Feature<Polygon> = getPolygonByPointAndRadius(point.coordinates, radiusInMeters / 1000);
     const criteria: IOverlaysCriteria = {
