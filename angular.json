@@ -31,7 +31,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "node_modules/cesium/Build/Cesium",
+                "input": "node_modules/cesium/Build/CesiumUnminified",
                 "output": "/assets/Cesium"
               },
               "src/favicon.ico",
@@ -42,7 +42,17 @@
               "node_modules/@ansyn/ansyn/assets/styles/styles.css"
             ],
             "scripts": [
-              "node_modules/cesium/Build/Cesium/Cesium.js"
+              "node_modules/cesium/Build/CesiumUnminified/Cesium.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "@babel/runtime-corejs3",
+              "raf",
+              "rxjs/index",
+              "shpjs",
+              "lodash-decorators",
+              "file-saver",
+              "lodash",
+              "auto-subscriptions"
             ]
           },
           "configurations": {

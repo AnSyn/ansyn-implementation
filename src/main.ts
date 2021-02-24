@@ -61,6 +61,10 @@ const mergeChanges = {
   },
   credentialsConfig: {
     'active': true
+  },
+  componentVisibility: {
+    timeline: true,
+    annotations: true
   }
 };
 
