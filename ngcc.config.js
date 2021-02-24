@@ -3,7 +3,8 @@ module.exports = {
     "@ansyn/ansyn": {
       ignorableDeepImportMatchers: [
         /ol\//,
-        /d3\//
+        /d3\//,
+        /rxjs\/index/
       ]
     },
     "@ansyn/ol": {
